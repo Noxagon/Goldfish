@@ -1,4 +1,49 @@
-function validateInputs() {
+//var inputID = document.forms["loginForm"]["inputNRICFIN"];
+//var inputPass = document.forms["loginForm"]["inputPassword"];
+var inputNRIC = document.getElementById("inputNRICFIN");
+var inputPass = document.getElementById("inputPassword");
+var isNric = false;
+var isPass = false;
+
+const nricHandler = function(e) {
+    if (e.target.value.length == 9) {
+        isNric = true;
+    } else {
+        isNric = false;
+    }
+
+    if (isNric && isPass) {
+        enableButton(false);
+    } else {
+        enableButton(true);
+    }
+}
+
+const passHandler = function(e) {
+    if (e.target.value.length >= 8) {
+        isPass = true;
+    } else {
+        isPass = false;
+    }
+
+    if (isNric && isPass) {
+        enableButton(false);
+    } else {
+        enableButton(true);
+    }
+}
+
+function enableButton(isEnable) {
+    document.getElementById("sign-in-button").disabled = isEnable;
+}
+
+inputNRIC.addEventListener('input', nricHandler);
+inputNRIC.addEventListener('propertychange', nricHandler);
+
+inputPass.addEventListener('input', passHandler);
+inputPass.addEventListener('propertychange', passHandler);
+
+// function validateInputs() {
     //window.alert("Please enter your name");
     // var name = document.forms["SurveyForm"]["Name"];
     // var email = document.forms["SurveyForm"]["Email"];
@@ -52,4 +97,4 @@ function validateInputs() {
     //         + ", " + courseValue + ", " + courseValue + " - " + courseText;
     // window.alert(message);
     // return true; 
-}
+// }
