@@ -7,37 +7,20 @@
         <meta name="author" content="" />
         <title>Goldfish</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
         <!-- Additional CSS -->
-        <link href="css/reward-styles.css" rel="stylesheet" />
+        <link href="../css/reward-styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="main_page.html">Goldfish</a>
-                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#programs">Programmes</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger active" href="#rewards">Rewards</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
+        <?php include '../utils/navbar.php'; ?>      
         
         <!-- Page Content -->
         <div class="container">
@@ -48,9 +31,9 @@
 
                 <h1 class="my-4">Categories</h1>
                 <div class="list-group">
-                    <a href="grocery_products.html" class="list-group-item"><h5>Groceries</h5></a>
-                    <a href="health_products.html" class="list-group-item"><h5>Health & Wellcare</h5></a>
-                    <a href="home_products.html" class="list-group-item" style="background-color: lightgray;"><h5>Home & Lifestyle</h5></a>
+                    <a href="grocery_products.php" class="list-group-item"><h5>Groceries</h5></a>
+                    <a href="health_products.php" class="list-group-item"><h5>Health & Wellcare</h5></a>
+                    <a href="home_products.php" class="list-group-item" style="background-color: lightgray;"><h5>Home & Lifestyle</h5></a>
                 </div>
 
             </div>
@@ -138,7 +121,7 @@
                     <a href="#"><img class="card-img-top" src="https://my-live-01.slatic.net/p/f00947d421340796c0541be7bfb82d4b.jpg" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="#">Russell Taylors 6L Electric Pressure Cooker PC-60, stainless steel pot - Multi Cooker Rice Cooker</a>
+                        <a href="#">Russell Taylors 6L Electric Pressure Cooker</a>
                         </h4>
                         <h5>60 Points</h5>
                         <!-- <p class="card-text">
@@ -162,7 +145,7 @@
                     <a href="#"><img class="card-img-top" src="data:image/jpeg;base64,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" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="#">Original Xiaomi Deerma Water Spray Dust Cleaner 360 Rotary Handheld Mop Floor Sweeper</a>
+                        <a href="#">Xiaomi Deerma Water Spray Mop Dust Cleaner</a>
                         </h4>
                         <h5>20 Points</h5>
                         <!-- <p class="card-text">
@@ -184,7 +167,7 @@
                     <a href="#"><img class="card-img-top" src="https://my-test-11.slatic.net/p/583374abddd397ac1440e261e5d46612.jpg_340x340q80.jpg_.webp" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="#">XIAOMI MIJIA Robot Vacuum Cleaner 1C for Home Wet Mopping Auto Sweeping Dust Sterilize</a>
+                        <a href="#">XIAOMI MIJIA Robot Vacuum Cleaner</a>
                         </h4>
                         <h5>250 Points</h5>
                         <!-- <p class="card-text">
@@ -203,10 +186,10 @@
 
                 <div class="col-lg-6 col-md-6 mb-4">
                     <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="https://images.philips.com/is/image/PhilipsConsumer/HD7447_00-IMS-en_SG?$jpglarge$&wid=1250" alt=""></a>
+                    <a href="#"><img class="card-img-top" src="https://images.philips.com/is/image/PhilipsConsumer/HD7447_00-U1P-global-001?$jpglarge$&wid=420&hei=360" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="#">Philips Daily Collection Coffee maker- HD7447/00</a>
+                        <a href="#">Philips Daily Collection Coffee maker</a>
                         </h4>
                         <h5>35 Points</h5>
                         <!-- <p class="card-text">
@@ -234,57 +217,17 @@
         </div>
         <!-- /.container -->
 
-
-        <!-- Footer-->
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">
-                            2215 John Daniel Drive
-                            <br />
-                            Clark, MO 65243
-                        </p>
-                    </div>
-                    <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
-                    </div>
-                    <!-- Footer About Text-->
-                    <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                        <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright © Your Website 2020</small></div>
-        </div>
-        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
-        <div class="scroll-to-top d-lg-none position-fixed">
-            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
-        </div>
+        <?php include "../utils/footer.php"; ?>
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
+        <script src="../assets/mail/jqBootstrapValidation.js"></script>
+        <script src="../assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
-        <script src="js/rewards-scripts.js"></script>
+        <script src="../js/rewards-scripts.js"></script>
     </body>
 </html>
