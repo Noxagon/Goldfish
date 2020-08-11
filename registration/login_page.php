@@ -29,7 +29,7 @@
                 <div class="card card-signin my-5">
                   <div class="card-body">
                     <h5 class="card-title text-center">Login</h5>
-                    <form id="loginForm" class="form-signin" method="post" action="login_page.php">
+                    <form class="form-signin" method="post" action="login_page.php">
                     <hr class="my-4">
                     
                       <div class="form-label-group">

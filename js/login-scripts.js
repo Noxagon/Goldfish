@@ -1,5 +1,3 @@
-//var inputID = document.forms["loginForm"]["inputNRICFIN"];
-//var inputPass = document.forms["loginForm"]["inputPassword"];
 var inputNRIC = document.getElementById("inputNRICFIN");
 var inputPass = document.getElementById("inputPassword");
 var isNric = false;

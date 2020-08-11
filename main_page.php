@@ -1,3 +1,16 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['nric'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	//header('location: registration/login_page.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['nric']);
+  	header("location: registration/login_page.php");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -33,7 +46,13 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#rewards">Rewards</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/Goldfish/registration/login_page.php"><i class="fas fa-user"></i> Login</a></li>
+                        <?php if(!isset($_SESSION['nric'])) : ?>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/Goldfish/registration/login_page.php"><i class="fas fa-user"></i> Login</a></li>
+                        <?php endif ?>
+                        <?php if(isset($_SESSION['nric'])): ?>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="">Profile</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="main_page.php?logout='1'"><i class="fas fa-user"></i> Logout</a></li>
+                        <?php endif ?>
                     </ul>
                 </div>
                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="#contact"></a>
@@ -175,25 +194,26 @@
         <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-white">About Us</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
+                <button class="btn btn-lg btn-secondary btn-block text-uppercase" name="reg_user" type="submit">Register</button>
                 <!-- About Section Content-->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-lg-4 ml-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
                     <div class="col-lg-4 mr-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
-                </div>
+                </div> -->
                 <!-- About Section Button-->
-                <!-- <div class="text-center mt-4">
+                <div class="text-center mt-4">
                     <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/themes/freelancer/">
                         <i class="fas fa-download mr-2"></i>
-                        Free Download!
+                        Find
                     </a>
-                </div> -->
+                </div>
             </div>
         </section>
         <!-- Contact Section-->
