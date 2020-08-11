@@ -1,0 +1,45 @@
+<GROCERY>
+    <ITEM>
+        <NAME>Farmhouse Milk - Fresh</NAME>
+        <POINTS>5</POINTS>
+        <URL>https://firebasestorage.googleapis.com/v0/b/gold-b1fea.appspot.com/o/groceries%2Fmilk.jpg?alt=media&token=029428b1-d567-4597-a522-75210f24b9de</URL>
+        <COUNTRY>Australia</COUNTRY>
+        <INFO>Pasteurised and homogenised milk,contains calcium,source of protein,rich and creamy</INFO> 
+    </ITEM>
+    <ITEM>
+        <NAME>Quaker Instant Oatmeal</NAME>
+        <POINTS>10</POINTS>
+        <URL>https://firebasestorage.googleapis.com/v0/b/gold-b1fea.appspot.com/o/groceries%2Foat.jpg?alt=media&token=262610e5-72e4-4adc-8733-5c774236111a</URL>
+        <COUNTRY>Malaysia</COUNTRY>
+        <INFO>Naturally cholesterol free,100% wholegrain</INFO>  
+    </ITEM>
+    <ITEM>
+        <NAME>Naturel Organic Brown Rice</NAME>
+        <POINTS>10</POINTS>
+        <URL>https://firebasestorage.googleapis.com/v0/b/gold-b1fea.appspot.com/o/groceries%2Frice.jpg?alt=media&token=add6f251-1d78-413d-98a7-d21b073c77e8</URL>
+        <COUNTRY>Malaysia</COUNTRY>
+        <INFO>Naturel Organic Rice is 100-Percent organic. Its grains are selected from the finest top quality fragrant (Hom Mali) rice from Thailand. Higher in Dietary Fiber and Calcium as compared to normal white rice. Rice may come in vacuumed or non-vacuumed packs.</INFO>  
+    </ITEM>
+    <ITEM>
+        <NAME>Ah Huat White Coffee - Low Fate</NAME>
+        <POINTS>10</POINTS>
+        <URL>https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13032434_XL1.jpg</URL>
+        <COUNTRY>Malaysia</COUNTRY>
+        <INFO>An aromatic, creamy white coffee with rich layer of foam. It is lower in fat content with no cane sugar added.</INFO>  
+    </ITEM>
+    <ITEM>
+        <NAME>Marigold Non Fat Yoghurt - Natural</NAME>
+        <POINTS>5</POINTS>
+        <URL>https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10671211_LXL1.jpg</URL>
+        <COUNTRY>Singapore</COUNTRY>
+        <INFO>Source of calcium that helps with the development of strong bones and teeth, at least 2x lower in saturated fat than regular yoghurt</INFO>  
+    </ITEM>
+    <ITEM>
+        <NAME>Meiji Plain Crackers - Original</NAME>
+        <POINTS>5</POINTS>
+        <URL>https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13099280_LXL1.jpg</URL>
+        <COUNTRY>Japan</COUNTRY>
+        <INFO>Meiji Plain Crackers are produced using a traditional long fermentation process which takes up to 24 hours to achieve the strong aroma and blend of a nice cracker.</INFO>  
+    </ITEM>
+    
+</GROCERY>
