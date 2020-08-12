@@ -204,8 +204,8 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ml-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                    <div class="col-lg-4 mr-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                    <div class="col-lg-4 ml-auto"><p class="lead">We are a group of students from Singapore Polytechnic trying to make a website to develop solutions to help the elderly to lead active and dignified lives in the silver years.</p></div>
+                    <div class="col-lg-4 mr-auto"><p class="lead">We are located at 500 Dover Rd, Singapore 139651</p></div>
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
@@ -294,7 +294,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/programs/game.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Come and join us for games for people who are keen in having fun with games</p>
                                     <a href="programs/game_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
@@ -325,7 +325,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/programs/cooking.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Come and join our cooking class for people who are keen in learning how to cook</p>
                                     <a href="programs/cooking_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
@@ -356,7 +356,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/programs/exercise.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Come and join our fitness class for people who are keen in staying healthy</p>
                                     <a href="programs/sport_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
@@ -387,7 +387,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/programs/workshop.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Come and join our workshops for people who are keen in learning new skills</p>
                                     <a href="programs/workshop_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
@@ -418,7 +418,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/programs/artcraft.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Come and join our cookin arts & craft class for people who are keen in learning how to design</p>
                                     <a href="programs/art_craft_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
@@ -449,7 +449,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/programs/dance.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Come and join our dancing class for people who are keen in learning how to dance</p>
                                     <a href="programs/music_dance_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
@@ -481,7 +481,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/rewards/grocery_3.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Text</p>
+                                    <p class="mb-5">Click proceed to find more on the groceries you can redeem</p>
                                     <a href="rewards/grocery_products.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
@@ -512,7 +512,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/rewards/health_2.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Click proceed to find more on the health products you can redeem</p>
                                     <a href="rewards/health_products.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
@@ -543,7 +543,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/rewards/home.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Click proceed to find more on the home appliances you can redeem</p>
                                     <a href="rewards/home_products.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>

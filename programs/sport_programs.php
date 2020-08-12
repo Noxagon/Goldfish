@@ -28,7 +28,7 @@
             <!-- Jumbotron Header -->
             <header class="jumbotron my-4">
             <h1 class="display-3">A Warm Welcome!</h1>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
+            <p class="lead">We have a variety of sports to choose from!</p>
             <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
             </header>
 
@@ -39,7 +39,7 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://tirisulayoga.com/wp-content/uploads/2018/06/seniors-yoga-teacher-training.jpg" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Yoga</h4>
+                    <h4 class="card-title">Yoga (2 point)</h4>
                     <p class="card-text">Yoga is a gentle way to improve your posture, balance, and coordination. Yoga is a systematic practice of physical exercise, breath control, relaxation, diet control, and positive thinking and meditation aimed at developing harmony in the body, mind, and environment.</p>
                 </div>
                 <div class="card-footer">
@@ -52,7 +52,7 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="http://learn.healthpro.com/wp-content/uploads/2015/01/shutterstock_223713133-zumba-gold-resize-620x340.jpg" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Zumba Workout</h4>
+                    <h4 class="card-title">Zumba Workout (2 point)</h4>
                     <p class="card-text">Zumba is a fitness program that combines Latin and international music with dance moves.Zumba routines incorporate interval training, alternating fast and slow rhythms, imprvoing cardiovascular fitness.</p>
                 </div>
                 <div class="card-footer">
@@ -65,7 +65,7 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://www.straitstimes.com/sites/default/files/styles/article_pictrure_780x520_/public/articles/2019/03/17/ST_20190317_XWALK_4698058.jpg?itok=vi_O1XpE&timestamp=1552759208" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Brisk Walk</h4>
+                    <h4 class="card-title">Brisk Walk (2 point)</h4>
                     <p class="card-text">A brisk walk is a relative term, since “brisk” for some, is either slow or quite speedy for others, depending on levels of fitness.</p>
                 </div>
                 <div class="card-footer">
@@ -78,7 +78,7 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://www.channelnewsasia.com/blueprint/servlet/image/7935848/16x9/1920/1080/203e06328502cc27f8d769932ab94964/vx/senior-citizens-doing-taichi---2079180.png" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Tai Chi</h4>
+                    <h4 class="card-title">Tai Chi (2 point)</h4>
                     <p class="card-text">Tai chi is a gentle exercise that helps seniors improve balance and prevent falls. It consists of making slow, graceful movements while breathing deeply..</p>
                 </div>
                 <div class="card-footer">
