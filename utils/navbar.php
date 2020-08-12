@@ -20,14 +20,18 @@
     }
 
     function checkReward() {
-        switch ($_SERVER["SCRIPT_NAME"]) {
-            case "/Goldfish/rewards/grocery_products.php":
+        switch (dirname($_SERVER['PHP_SELF'])) {
+            case "/Goldfish/rewards":
                 echo "active";
                 break;
-            case "/Goldfish/rewards/health_products.php":
-                echo "active";
+            default:
                 break;
-            case "/Goldfish/rewards/home_products.php":
+        }
+    }
+
+    function checkProgram() {
+        switch (dirname($_SERVER['PHP_SELF'])) {
+            case "/Goldfish/programs":
                 echo "active";
                 break;
             default:
@@ -55,15 +59,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/Goldfish/main_page.php #programs">Programmes</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?php checkProgram(); ?>" href="/Goldfish/main_page.php #programs">Programmes</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?php checkReward(); ?>" href="/Goldfish/main_page.php  #rewards">Rewards</a></li>
                 <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/Goldfish/main_page.php #about">About</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/Goldfish/main_page.php #contact">Contact</a></li> -->
                 <?php if(!isset($_SESSION['nric'])) : ?>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/Goldfish/registration/login_page.php"><i class="fas fa-user"></i> Login</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger <?php checkLogin(); ?>" href="/Goldfish/registration/login_page.php"><i class="fas fa-user"></i> Login</a></li>
                 <?php elseif(isset($_SESSION['nric'])): ?>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="">Profile</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="main_page.php?logout='1'"><i class="fas fa-user"></i> Logout</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/Goldfish/main_page.php?logout='1'"><i class="fas fa-user"></i> Logout</a></li>
                 <?php endif ?>
             </ul>
         </div>
