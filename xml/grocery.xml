@@ -2,21 +2,21 @@
     <ITEM>
         <NAME>Farmhouse Milk - Fresh</NAME>
         <POINTS>5</POINTS>
-        <URL>https://firebasestorage.googleapis.com/v0/b/gold-b1fea.appspot.com/o/groceries%2Fmilk.jpg?alt=media&token=029428b1-d567-4597-a522-75210f24b9de</URL>
+        <URL>https://firebasestorage.googleapis.com/v0/b/gold-b1fea.appspot.com/o/groceries%2Fmilk.jpg?alt=media&amp;token=029428b1-d567-4597-a522-75210f24b9de</URL>
         <COUNTRY>Australia</COUNTRY>
-        <INFO>Pasteurised and homogenised milk,contains calcium,source of protein,rich and creamy</INFO> 
+        <INFO>&lt;ul&gt;&lt;li&gt;Pasteurised and homogenised milk&lt;/li&gt;&lt;li&gt;Contains calcium&lt;/li&gt;&lt;li&gt;Source of protein&lt;/li&gt;&lt;li&gt;Rich and creamy&lt;/li&gt;&lt;/ul&gt;</INFO> 
     </ITEM>
     <ITEM>
         <NAME>Quaker Instant Oatmeal</NAME>
         <POINTS>10</POINTS>
-        <URL>https://firebasestorage.googleapis.com/v0/b/gold-b1fea.appspot.com/o/groceries%2Foat.jpg?alt=media&token=262610e5-72e4-4adc-8733-5c774236111a</URL>
+        <URL>https://firebasestorage.googleapis.com/v0/b/gold-b1fea.appspot.com/o/groceries%2Foat.jpg?alt=media&amp;token=262610e5-72e4-4adc-8733-5c774236111a</URL>
         <COUNTRY>Malaysia</COUNTRY>
-        <INFO>Naturally cholesterol free,100% wholegrain</INFO>  
+        <INFO>&lt;ul&gt;&lt;li&gt;Naturally cholesterol free&lt;/li&gt;&lt;li&gt;100% wholegrain&lt;/li&gt;&lt;/ul&gt;</INFO>  
     </ITEM>
     <ITEM>
         <NAME>Naturel Organic Brown Rice</NAME>
         <POINTS>10</POINTS>
-        <URL>https://firebasestorage.googleapis.com/v0/b/gold-b1fea.appspot.com/o/groceries%2Frice.jpg?alt=media&token=add6f251-1d78-413d-98a7-d21b073c77e8</URL>
+        <URL>https://firebasestorage.googleapis.com/v0/b/gold-b1fea.appspot.com/o/groceries%2Frice.jpg?alt=media&amp;token=add6f251-1d78-413d-98a7-d21b073c77e8</URL>
         <COUNTRY>Malaysia</COUNTRY>
         <INFO>Naturel Organic Rice is 100-Percent organic. Its grains are selected from the finest top quality fragrant (Hom Mali) rice from Thailand. Higher in Dietary Fiber and Calcium as compared to normal white rice. Rice may come in vacuumed or non-vacuumed packs.</INFO>  
     </ITEM>
