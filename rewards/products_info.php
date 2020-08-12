@@ -3,32 +3,35 @@ $category = $_GET['category'];
 $i = $_GET['id'];
 $xmlDoc = new DOMDocument();
 
-switch ($category) {
-    case "GR":
-        $xmlDoc->load("../xml/grocery.xml");
-        break;
-    case "HW":
-        $xmlDoc->load("../xml/health.xml");
-        break;
-    case "HL":
-        $xmlDoc->load("../xml/home.xml");
-        break;
+if (isset($category)) {
+    switch ($category) {
+        case "GR":
+            $xmlDoc->load("../xml/grocery.xml");
+            break;
+        case "HW":
+            $xmlDoc->load("../xml/health.xml");
+            break;
+        case "HL":
+            $xmlDoc->load("../xml/home.xml");
+            break;
+    }
+    
+    $xa = $xmlDoc->getElementsByTagName('NAME');
+    $ya = $xa-> item($i);
+    
+    $xb = $xmlDoc->getElementsByTagName('POINTS');
+    $yb = $xb-> item($i);
+    
+    $xc = $xmlDoc->getElementsByTagName('URL');
+    $yc = $xc-> item($i);
+    
+    $xd = $xmlDoc->getElementsByTagName('COUNTRY');
+    $yd = $xd-> item($i);
+    
+    $xe = $xmlDoc->getElementsByTagName('INFO');
+    $ye = $xe-> item($i);
 }
 
-$xa = $xmlDoc->getElementsByTagName('NAME');
-$ya = $xa-> item($i);
-
-$xb = $xmlDoc->getElementsByTagName('POINTS');
-$yb = $xb-> item($i);
-
-$xc = $xmlDoc->getElementsByTagName('URL');
-$yc = $xc-> item($i);
-
-$xd = $xmlDoc->getElementsByTagName('COUNTRY');
-$yd = $xd-> item($i);
-
-$xe = $xmlDoc->getElementsByTagName('INFO');
-$ye = $xe-> item($i);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,9 +65,9 @@ $ye = $xe-> item($i);
             <div class="col-lg-3">
             <h1 class="my-4">Categories</h1>
                 <div class="list-group">
-                    <a href="grocery_products.php" class="list-group-item"><h5>Groceries</h5></a>
-                    <a href="health_products.php" class="list-group-item"><h5>Health & Wellcare</h5></a>
-                    <a href="home_products.php" class="list-group-item" style="background-color: lightgray;"><h5>Home & Lifestyle</h5></a>
+                    <a href="grocery_products.php" class="list-group-item <?php if($category=="GR") echo "active"; ?>"><h5>Groceries</h5></a>
+                    <a href="health_products.php" class="list-group-item <?php if($category=="HW") echo "active"; ?>"><h5>Health & Wellcare</h5></a>
+                    <a href="home_products.php" class="list-group-item <?php if($category=="HL") echo "active"; ?>"><h5>Home & Lifestyle</h5></a>
                 </div>
             </div>
             <!-- /.col-lg-3 -->
@@ -73,15 +76,14 @@ $ye = $xe-> item($i);
 
                 <div class="card mt-4">
                 <img class="card-img-top img-fluid" src="<?php echo "{$yc->nodeValue}"; ?>" alt="">
-                <hr/>
                 <div class="card-body">
+                    <hr/>
                     <h3 class="card-title"><?php echo "{$ya->nodeValue}"; ?></h3>
                     <h4><i class="fab fa-bitcoin"></i> <?php echo "{$yb->nodeValue}"; ?> Points</h4>
                     <hr/>
                     <p class="card-text"><b>Key Information:</b><br/> <?php echo "{$ye->nodeValue}"; ?></p>
-                    <p class="card-text"><b>Country of Origin:</b><br/> <?php echo "{$yd->nodeValue}"; ?></p>
-                    <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-                    4.0 stars
+                    <p class="card-text" style="margin-bottom: 0.5rem;"><b>Country of Origin:</b><br/> <?php echo "{$yd->nodeValue}"; ?></p>
+                    <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span> 4.0 stars
                 </div>
                 </div>
                 <!-- /.card -->

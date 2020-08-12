@@ -33,7 +33,7 @@
                 <div class="list-group">
                     <a href="grocery_products.php" class="list-group-item"><h5>Groceries</h5></a>
                     <a href="health_products.php" class="list-group-item"><h5>Health & Wellcare</h5></a>
-                    <a href="home_products.php" class="list-group-item" style="background-color: lightgray;"><h5>Home & Lifestyle</h5></a>
+                    <a href="home_products.php" class="list-group-item active"><h5>Home & Lifestyle</h5></a>
                 </div>
 
             </div>
