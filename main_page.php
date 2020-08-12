@@ -294,7 +294,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/programs/game.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Come and join us for games for people who are keen in having fun with games</p>
                                     <a href="programs/game_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
