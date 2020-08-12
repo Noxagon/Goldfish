@@ -499,7 +499,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/rewards/grocery_3.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Text</p>
+                                    <p class="mb-5">Click Proceed to find out more about the Groceries you can redeeem!</p>
                                     <a href="rewards/grocery_products.php" class="btn btn-primary">Proceed</a>
                                 </div>
                             </div>
@@ -530,7 +530,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/rewards/health_2.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Click Proceed to find out more about the Health products you can redeeem!</p>
                                     <a href="rewards/health_products.php" class="btn btn-primary">Proceed</a>
                                 </div>
                             </div>
@@ -561,7 +561,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/rewards/home.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Click Proceed to find out more about the home appliances you can redeeem!</p>
                                     <a href="rewards/home_products.php" class="btn btn-primary">Proceed</a>
                                 </div>
                             </div>
