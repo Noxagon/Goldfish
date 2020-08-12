@@ -427,7 +427,7 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio Modal 6-->
+        <!-- Music and Dance Modal 6-->
         <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
