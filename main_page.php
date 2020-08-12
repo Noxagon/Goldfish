@@ -325,7 +325,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/programs/cooking.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Come and join our cooking class for people who are keen in learning how to cook</p>
                                     <a href="programs/cooking_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
@@ -356,7 +356,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/programs/exercise.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Come and join our fitness class for people who are keen in staying healthy</p>
                                     <a href="programs/sport_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
@@ -387,7 +387,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/programs/workshop.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Come and join our workshops for people who are keen in learning new skills</p>
                                     <a href="programs/workshop_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
@@ -418,7 +418,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/programs/artcraft.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Come and join our cookin arts & craft class for people who are keen in learning how to design</p>
                                     <a href="programs/art_craft_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
@@ -449,7 +449,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/programs/dance.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-5">Come and join our dancing class for people who are keen in learning how to dance</p>
                                     <a href="programs/music_dance_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                                 </div>
                             </div>
