@@ -75,7 +75,7 @@
                     <a href="#"><img class="card-img-top" src="https://firebasestorage.googleapis.com/v0/b/gold-b1fea.appspot.com/o/groceries%2Fmilk.jpg?alt=media&token=029428b1-d567-4597-a522-75210f24b9de" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="products_info.php?category=GR&id=0">Farmhouse Fresh Milk</a>
+                        <a href="products_info.php?id=GR0">Farmhouse Fresh Milk</a>
                         </h4>
                         <h5>5 Points</h5>
                     </div>
@@ -90,7 +90,7 @@
                     <a href="#"><img class="card-img-top" src="https://firebasestorage.googleapis.com/v0/b/gold-b1fea.appspot.com/o/groceries%2Foat.jpg?alt=media&token=262610e5-72e4-4adc-8733-5c774236111a" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="products_info.php?category=GR&id=1">Quaker Instant Oatmeal</a>
+                        <a href="products_info.php?id=GR1">Quaker Instant Oatmeal</a>
                         </h4>
                         <h5>10 Points</h5>
                     </div>
@@ -105,7 +105,7 @@
                     <a href="#"><img class="card-img-top" src="https://firebasestorage.googleapis.com/v0/b/gold-b1fea.appspot.com/o/groceries%2Frice.jpg?alt=media&token=add6f251-1d78-413d-98a7-d21b073c77e8" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="products_info.php?category=GR&id=2">Naturel Organic Brown Rice</a>
+                        <a href="products_info.php?id=GR2">Naturel Organic Brown Rice</a>
                         </h4>
                         <h5>10 Points</h5>
                     </div>
@@ -120,7 +120,7 @@
                     <a href="#"><img class="card-img-top" src="https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13032434_XL1.jpg" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="products_info.php?category=GR&id=3">Ah Huat White Coffee - Low Fat</a>
+                        <a href="products_info.php?id=GR3">Ah Huat White Coffee - Low Fat</a>
                         </h4>
                         <h5>10 Points</h5>
                     </div>
@@ -135,7 +135,7 @@
                     <a href="#"><img class="card-img-top" src="https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10671211_LXL1.jpg" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="products_info.php?category=GR&id=4">Marigold Non Fat Yoghurt - Natural</a>
+                        <a href="products_info.php?id=GR4">Marigold Non Fat Yoghurt - Natural</a>
                         </h4>
                         <h5>5 Points</h5>
                     </div>
@@ -150,7 +150,7 @@
                     <a href="#"><img class="card-img-top" src="https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13099280_LXL1.jpg" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="products_info.php?category=GR&id=5">Meiji Plain Crackers - Original</a>
+                        <a href="products_info.php?id=GR5">Meiji Plain Crackers - Original</a>
                         </h4>
                         <h5>5 Points</h5>
                     </div>

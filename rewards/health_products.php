@@ -75,7 +75,7 @@
                     <a href="#"><img class="card-img-top" src="https://www.watsons.com.sg/medias/Essence-of-Chicken-6s-29758.jpg?context=bWFzdGVyfGZyb250L3pvb218ODcwNzZ8aW1hZ2UvanBlZ3xmcm9udC96b29tLzg5MDM3NDAwOTY1NDIuanBnfGZlOGE3NmYxMGMzZDc0ZDQyNjQ3ODg5ZmM2YjVjOWUwMmU2YjcwY2EzODg5NWI0M2VkYjgzZjE5NDdiZDU3MzQ" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="products_info.php?category=HW&id=0">BRAND's Essence of Chicken 6s x 68ml</a>
+                        <a href="products_info.php?id=HW0">BRAND's Essence of Chicken 6s x 68ml</a>
                         </h4>
                         <h5>15 Points</h5>
                         <!-- <p class="card-text">BRAND'S Essence of Chicken can be taken straight from the bottle and is prefect at room temperature, chilled or warmed. Once opened, the contents should be refrigerated and consumed within 24 hours. Take it daily, anytime, anywhere as part of a balanced diet</p> -->
@@ -91,7 +91,7 @@
                     <a href="#"><img class="card-img-top" src="https://www.watsons.com.sg/medias/NH-Nutri-Grains-87752.jpg?context=bWFzdGVyfGZyb250L3pvb218NjY0OTN8aW1hZ2UvanBlZ3xmcm9udC96b29tLzg5MDg3NjU4ODg1NDIuanBnfDJhN2VkNzY4YmZlNzIwZTQ3NWRjYzAxNjhiODdlMzgyMjFjZjA5NzUyMDllYTI3NjZjNzNjOWJkMjE4YmNjOWE" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="products_info.php?category=HW&id=1">NH NUTRI GRAINS Instant Multimix Grain 1kg</a>
+                        <a href="products_info.php?id=HW1">NH NUTRI GRAINS Instant Multimix Grain 1kg</a>
                         </h4>
                         <h5>20 Points</h5>
                         <!-- <p class="card-text">NH Nutri Grains is a wholesome health drink made from 20 nutrient-rich grains and the purple sweet potato. While the grains are packed with protein, dietary fibre, vitamins, minerals and phytonutrients for good health, the purple sweet potato is rich in antioxidants to help improve immunity and prevent disease. For better health, choose NH Nutri Grains for you and your family.</p> -->
@@ -107,7 +107,7 @@
                     <a href="#"><img class="card-img-top" src="https://www.watsons.com.sg/medias/Caltrate-Plus-Minerals-100-Tablets-90029.jpg?context=bWFzdGVyfGZyb250L3pvb218NjI5OTJ8aW1hZ2UvanBlZ3xmcm9udC96b29tLzg5MjQ4OTgzNjEzNzQuanBnfDk4YmY0YTVlYzY5MDFmM2E5ZmM0ZTI1NDYzOWE2YTEyYzA4NDI1ZGNlNWNkMWU0OWRlMjM4Y2Q3ZTQxODY1NWE" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="products_info.php?category=HW&id=2">CALTRATE Plus Minerals 100 Tablets</a>
+                        <a href="products_info.php?id=HW2">CALTRATE Plus Minerals 100 Tablets</a>
                         </h4>
                         <h5>25 Points</h5>
                         <!-- <p class="card-text">Caltrate offers the highest level of vitamin D3     to help maximize calcium absorption and support healthy bones, joints and muscles* - so you can live life to the fullest. Sufficient calcium & vitamin D as part of a healthy diet may reduce the risk of osteoporosis.</p> -->
@@ -123,7 +123,7 @@
                     <a href="#"><img class="card-img-top" src="https://www.watsons.com.sg/medias/zoom-front-48081.jpg?context=bWFzdGVyfGZyb250L3pvb218NTk4MTR8aW1hZ2UvanBlZ3xmcm9udC96b29tL2gwMS9oYjAvOTAxMTM4MzE3MzE1MC5qcGd8YTNiZmNhNDFkOTE0YWQxODM1OWQzYzRjZmQ0OTBjNDZiZDQzYjNiZmQ3ZWViZTY4ZDY1ZTYzNzk1M2Y0ZDQ3ZA" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="products_info.php?category=HW&id=3">NUTRILIFE Immune C Vitamin C + Resveratrol 60 Caps</a>
+                        <a href="products_info.php?id=HW3">NUTRILIFE Immune C Vitamin C + Resveratrol 60 Caps</a>
                         </h4>
                         <h5>40 Points</h5>
                         <!-- <p class="card-text">Nutrilife Immune C Vitamin C + Resveratrol , Food state supplement immune System Support Antioxidant Booster, Enchanced Absorption and Time Release Formula.</p> -->
@@ -139,7 +139,7 @@
                     <a href="#"><img class="card-img-top" src="https://www.watsons.com.sg/medias/SENIOR-COM-MULTI-VITAMINS-150S-55932.jpg?context=bWFzdGVyfGZyb250L3pvb218OTUzMzd8aW1hZ2UvanBlZ3xmcm9udC96b29tLzg4NTU4NDA3MTg4NzguanBnfGZkZWM3OTM2N2IzNzI5NDdlNDNiY2VmOTJjZmMxYTU2ZTI4OGJjM2QyYWE4NzY3YmE3ZTUwNjUzMTgxOTlhNjA" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="products_info.php?category=HW&id=4">PRINCIPLE NUTRITION PLUS Plus Senior Complete Multi Vitamins 150 Tablets</a>
+                        <a href="products_info.php?id=HW4">PRINCIPLE NUTRITION PLUS Plus Senior Complete Multi Vitamins 150 Tablets</a>
                         </h4>
                         <h5>20 Points</h5>
                         <!-- <p class="card-text">In our Senior Complete Multivitamin we have included bone strengthening nutrients such as calcium, Vitamin D, and phosphorus. </p> -->
@@ -155,7 +155,7 @@
                     <a href="#"><img class="card-img-top" src="https://www.watsons.com.sg/medias/Hyper-Strength-Omega-3-Alaska-Tuna-Fish-Oil-100s-14944.jpg?context=bWFzdGVyfGZyb250L3pvb218MTIwMzMzfGltYWdlL2pwZWd8ZnJvbnQvem9vbS84ODU4MTU0MjM3OTgyLmpwZ3wyNDUwODBmY2MxYzI2ZmQ1ZTVjZmUzMGIyYTg2YTNjMTUxODAzY2E4OGYwOWE4ODFhMzcwNzk0ZGEyMmQ3MjM4" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a href="products_info.php?category=HW&id=5">VITAREALM Hyper Strength Omega3 Alaska Tuna Fish Oil 100 Capsules </a>
+                        <a href="products_info.php?id=HW5">VITAREALM Hyper Strength Omega3 Alaska Tuna Fish Oil 100 Capsules </a>
                         </h4>
                         <h5>50 Points</h5>
                         <!-- <p class="card-text">VitaRealm Salmon Fish Oil Plus contains 100% pure concentrated salmon fish oil providing a great source of omega-3 fatty acids, DHA & EPA (70%). Omega-3 fatty acids are essential for healthy development of heart, brain, vision, joint and immune system. It is also beneficial for maintaining healthy blood pressure and cholesterol level.</p> -->

@@ -1,9 +1,12 @@
 <?php
-$category = $_GET['category'];
-$i = $_GET['id'];
+// AJAX -PHP - XML (Jaron)
 $xmlDoc = new DOMDocument();
 
-if (isset($category)) {
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $category = substr($id, 0, 2);
+    $index = substr($id, -1);
+
     switch ($category) {
         case "GR":
             $xmlDoc->load("../xml/grocery.xml");
@@ -17,21 +20,69 @@ if (isset($category)) {
     }
     
     $xa = $xmlDoc->getElementsByTagName('NAME');
-    $ya = $xa-> item($i);
+    $ya = $xa-> item($index);
     
     $xb = $xmlDoc->getElementsByTagName('POINTS');
-    $yb = $xb-> item($i);
+    $yb = $xb-> item($index);
     
     $xc = $xmlDoc->getElementsByTagName('URL');
-    $yc = $xc-> item($i);
+    $yc = $xc-> item($index);
     
     $xd = $xmlDoc->getElementsByTagName('COUNTRY');
-    $yd = $xd-> item($i);
+    $yd = $xd-> item($index);
     
     $xe = $xmlDoc->getElementsByTagName('INFO');
-    $ye = $xe-> item($i);
+    $ye = $xe-> item($index);
+} else {
+    exit('Invalid page ID.');
 }
 
+// Reviews system + SQL (Jaron)
+try {
+    $pdo = mysqli_connect('localhost', 'root', '', 'goldfish', '3308');
+} catch (PDOException $exception) {
+    exit('Failed to connect to database!');
+}
+
+function time_elapsed_string($datetime, $full = false) {
+    $now = new DateTime;
+    $ago = new DateTime($datetime);
+    $diff = $now->diff($ago);
+    $diff->w = floor($diff->d / 7);
+    $diff->d -= $diff->w * 7;
+    $string = array('y' => 'year', 'm' => 'month', 'w' => 'week', 'd' => 'day', 'h' => 'hour', 'i' => 'minute', 's' => 'second');
+    foreach ($string as $k => &$v) {
+        if ($diff->$k) {
+            $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+        } else {
+            unset($string[$k]);
+        }
+    }
+    if (!$full) $string = array_slice($string, 0, 1);
+    return $string ? implode(', ', $string) . ' ago' : 'just now';
+}
+
+if (isset($_GET['id'])) {
+    if (isset($_POST['name'], $_POST['rating'], $_POST['content'])) {
+        // Insert a new review (user submitted form)
+        $stmt = $pdo->prepare('INSERT INTO reviews (page_id, name, content, rating, submit_date) VALUES (?,?,?,?,NOW())');
+        $stmt->execute([$_GET['id'], $_POST['name'], $_POST['content'], $_POST['rating']]);
+        exit('Your review has been submitted!');
+    }
+    
+    // Get all reviews by the Page ID ordered by the submit date
+    $stmt = $pdo->prepare('SELECT * FROM reviews WHERE page_id = ? AND ORDER BY submit_date DESC');
+    // $stmt -> bind_param("sss", $firstname, $lastname, $email);
+
+    // $stmt->execute([$_GET['id']]);
+    // $reviews = $stmt->fetch(PDO::FETCH_ASSOC);
+    // // Get the overall rating and total amount of reviews
+    // $stmt = $pdo->prepare('SELECT AVG(rating) AS overall_rating, COUNT(*) AS total_reviews FROM reviews WHERE page_id = ?');
+    // $stmt->execute([$_GET['id']]);
+    // $reviews_info = $stmt->fetch(PDO::FETCH_ASSOC);
+} else {
+    exit('Invalid page ID.');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +102,7 @@ if (isset($category)) {
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css/styles.css" rel="stylesheet" />
         <!-- Additional CSS -->
-        <link href="../css/reward-styles.css" rel="stylesheet" />
+        <link href="../css/product-styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -72,7 +123,7 @@ if (isset($category)) {
             </div>
             <!-- /.col-lg-3 -->
 
-            <div class="col-lg-9">
+            <div class="col-lg-8">
 
                 <div class="card mt-4">
                 <img class="card-img-top img-fluid" src="<?php echo "{$yc->nodeValue}"; ?>" alt="">
@@ -89,6 +140,74 @@ if (isset($category)) {
                 <!-- /.card -->
 
                 <div class="card card-outline-secondary my-4">
+                    <div class="card-header">
+                        Product Ratings
+                    </div>
+                    <span class="heading" style="margin-top: 0.5rem; margin-left: 1rem;">User Rating</span>
+                    <span class="heading" style="margin-left: 1rem;"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></span>
+                    <p style="margin-top: 0.5rem; margin-left: 1rem;">4.1 average based on 254 reviews.</p>
+                    <hr style="border:3px solid #f1f1f1">
+
+                    <div class="row-ratings">
+                        <div class="side">
+                            <div>5 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                            <div class="bar-5"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>150</div>
+                        </div>
+                        <div class="side">
+                            <div>4 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                            <div class="bar-4"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>63</div>
+                        </div>
+                        <div class="side">
+                            <div>3 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                            <div class="bar-3"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>15</div>
+                        </div>
+                        <div class="side">
+                            <div>2 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                            <div class="bar-2"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>6</div>
+                        </div>
+                        <div class="side">
+                            <div>1 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                            <div class="bar-1"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>20</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-outline-secondary my-4">
                 <div class="card-header">
                     Product Reviews
                 </div>
@@ -102,7 +221,12 @@ if (isset($category)) {
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
                     <small class="text-muted">Posted by Anonymous on 3/1/17</small>
                     <hr>
-                    <a href="#" class="btn btn-success">Leave a Review</a>
+                    <form id="reviewForm" name="reviewForm">
+                        <textarea class="form-control" id="reviewMessage" name="reviewMessage" rows="3" placeholder="Message" required="required" data-validation-required-message="Please enter a message." style="margin-bottom: 0.5rem;"></textarea>
+                        <span class="heading"><i id="star1" onmouseover="color(1)" onmouseout="nocolor()" class="fa fa-star"></i> <i id="star2" onmouseover="color(2)" onmouseout="nocolor()" class="fa fa-star"></i> <i id="star3" onmouseover="color(3)" onmouseout="nocolor()" class="fa fa-star"></i> <i id="star4" onmouseover="color(4)" onmouseout="nocolor()" class="fa fa-star"></i> <i id="star5" onmouseover="color(5)" onmouseout="nocolor()" class="fa fa-star"></i></span>
+                        <p class="help-block text-danger" style="margin-bottom: 0.5rem;"></p>
+                        <button class="btn btn-primary" id="sendMessageButton" disabled>Leave a Review</button>
+                    </form>
                 </div>
                 </div>
                 <!-- /.card -->
@@ -127,5 +251,43 @@ if (isset($category)) {
         <script src="../assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="../js/rewards-scripts.js"></script>
+        <script>
+            var inputReview = document.getElementById("reviewMessage");
+
+            const reviewHandler = function(e) {
+                if (e.target.value.length > 0) {
+                    document.getElementById("sendMessageButton").disabled = false;
+                } else {
+                    document.getElementById("sendMessageButton").disabled = true;
+                }
+            }
+
+            inputReview.addEventListener('input', reviewHandler);
+            inputReview.addEventListener('propertychange', reviewHandler);
+
+            function color(num) {
+                switch (num) {
+                    case 5:
+                        document.getElementById("star5").style.color = "orange";
+                    case 4:
+                        document.getElementById("star4").style.color = "orange";
+                    case 3:
+                        document.getElementById("star3").style.color = "orange";
+                    case 2:
+                        document.getElementById("star2").style.color = "orange";
+                    case 1:
+                        document.getElementById("star1").style.color = "orange";
+                        break;
+                }
+            }
+
+            function nocolor() {
+                document.getElementById("star5").style.color = "black";
+                document.getElementById("star4").style.color = "black";
+                document.getElementById("star3").style.color = "black";
+                document.getElementById("star2").style.color = "black";
+                document.getElementById("star1").style.color = "black";
+            }
+        </script>
     </body>
 </html>

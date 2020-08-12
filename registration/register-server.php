@@ -6,7 +6,8 @@ $nric = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'registration', '3308');
+//$db = mysqli_connect('localhost', 'root', '', 'registration', '3308');
+$db = mysqli_connect('localhost', 'root', '', 'goldfish', '3308');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -25,12 +26,12 @@ if (isset($_POST['reg_user'])) {
   }
 
   // first check the database to make sure a user does not already exist with the same nric
-  $user_check_query = "SELECT * FROM users WHERE nric='$nric' LIMIT 1";
+  $user_check_query = "SELECT * FROM users WHERE user_id='$nric' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
   
   if ($user) { // if user exists
-    if ($user['nric'] === $nric) {
+    if ($user['user_id'] === $nric) {
       array_push($errors, "User already exists!");
     }
   }
@@ -39,10 +40,10 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO users (nric, password) 
+  	$query = "INSERT INTO users (user_id, user_password) 
   			  VALUES('$nric', '$password')";
   	mysqli_query($db, $query);
-  	$_SESSION['nric'] = $nric;
+  	$_SESSION['user_id'] = $nric;
   	$_SESSION['success'] = "You are now logged in";
   	header('location: ../main_page.php');
   }
@@ -58,10 +59,10 @@ if (isset($_POST['login_user'])) {
 
   if (count($errors) == 0) {
   	$password = md5($password);
-  	$query = "SELECT * FROM users WHERE nric='$nric' AND password='$password'";
+  	$query = "SELECT * FROM users WHERE user_id='$nric' AND user_password='$password'";
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
-  	  $_SESSION['nric'] = $nric;
+  	  $_SESSION['user_id'] = $nric;
   	  $_SESSION['success'] = "You are now logged in";
   	  header('location: ../main_page.php');
   	}else {

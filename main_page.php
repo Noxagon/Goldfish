@@ -1,13 +1,13 @@
 <?php 
   session_start(); 
 
-  if (!isset($_SESSION['nric'])) {
+  if (!isset($_SESSION['user_id'])) {
   	$_SESSION['msg'] = "You must log in first";
   	//header('location: registration/login_page.php');
   }
   if (isset($_GET['logout'])) {
   	session_destroy();
-  	unset($_SESSION['nric']);
+  	unset($_SESSION['user_id']);
   	header("location: registration/login_page.php");
   }
 ?>
@@ -46,10 +46,10 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#rewards">Rewards</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
-                        <?php if(!isset($_SESSION['nric'])) : ?>
+                        <?php if(!isset($_SESSION['user_id'])) : ?>
                             <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/Goldfish/registration/login_page.php"><i class="fas fa-user"></i> Login</a></li>
                         <?php endif ?>
-                        <?php if(isset($_SESSION['nric'])): ?>
+                        <?php if(isset($_SESSION['user_id'])): ?>
                             <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="">Profile</a></li>
                             <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="main_page.php?logout='1'"><i class="fas fa-user"></i> Logout</a></li>
                         <?php endif ?>
@@ -74,7 +74,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">- Join Events - Earn Rewards -</p>
+                <p class="masthead-subheading font-weight-light mb-0">- Join Programmes - Earn Rewards -</p>
             </div>
         </header>
         <!-- Portfolio Section-->
