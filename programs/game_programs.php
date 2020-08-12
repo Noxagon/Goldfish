@@ -78,8 +78,8 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://test1.thkms.org.sg/wp-content/uploads/2016/05/marbles.jpg" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Tai Chi</h4>
-                    <p class="card-text">Goli. Also known as kelereng or guli, Goli is a game played with marbles. Made of either glass, clay, limestone, or plastic, the marbles are used to hit another players' marbles in an attempt to claim them.</p>
+                    <h4 class="card-title">Goli</h4>
+                    <p class="card-text">Also known as kelereng or guli, Goli is a game played with marbles. Made of either glass, clay, limestone, or plastic, the marbles are used to hit another players' marbles in an attempt to claim them.</p>
                 </div>
                 <div class="card-footer">
                     <a href="#" class="btn btn-primary">Find Out More!</a>
