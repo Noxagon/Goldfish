@@ -1,6 +1,13 @@
 <?php
+include '../utils/navbar.php';
+
 // AJAX -PHP - XML (Jaron)
 $xmlDoc = new DOMDocument();
+$db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
+
+if ($db -> connect_errno) {
+    die('Failed to connect to database!');
+}
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -33,20 +40,29 @@ if (isset($_GET['id'])) {
     
     $xe = $xmlDoc->getElementsByTagName('INFO');
     $ye = $xe-> item($index);
+
+    if (isset($_POST['reviewMessage'], $_POST['reviewRatings'])) {
+        // Insert a new review (user submitted form)
+        $stmt = $db->prepare("INSERT INTO product_reviews (product_id, user_id, user_review, user_rating, submit_date) VALUES (?,?,?,?,NOW())");
+        $stmt->bind_param("sssi", $product_id, $user_id, $user_review, $user_rating);
+
+        // set parameters and execute
+        $product_id = $_GET['id'];
+        $user_id = $_SESSION['user_id'];
+        $user_review = $_POST['reviewMessage'];
+        $user_rating = $_POST['reviewRatings'];
+        $stmt->execute();
+
+        $stmt -> close();
+    }
 } else {
     exit('Invalid page ID.');
 }
 
 // Reviews system + SQL (Jaron)
-try {
-    $pdo = mysqli_connect('localhost', 'root', '', 'goldfish', '3308');
-} catch (PDOException $exception) {
-    exit('Failed to connect to database!');
-}
-
 function time_elapsed_string($datetime, $full = false) {
-    $now = new DateTime;
-    $ago = new DateTime($datetime);
+    $now = new DateTime(null, new DateTimeZone('Asia/Singapore'));
+    $ago = new DateTime($datetime, new DateTimeZone('Asia/Singapore'));
     $diff = $now->diff($ago);
     $diff->w = floor($diff->d / 7);
     $diff->d -= $diff->w * 7;
@@ -62,27 +78,12 @@ function time_elapsed_string($datetime, $full = false) {
     return $string ? implode(', ', $string) . ' ago' : 'just now';
 }
 
-if (isset($_GET['id'])) {
-    if (isset($_POST['name'], $_POST['rating'], $_POST['content'])) {
-        // Insert a new review (user submitted form)
-        $stmt = $pdo->prepare('INSERT INTO reviews (page_id, name, content, rating, submit_date) VALUES (?,?,?,?,NOW())');
-        $stmt->execute([$_GET['id'], $_POST['name'], $_POST['content'], $_POST['rating']]);
-        exit('Your review has been submitted!');
-    }
-    
-    // Get all reviews by the Page ID ordered by the submit date
-    $stmt = $pdo->prepare('SELECT * FROM reviews WHERE page_id = ? AND ORDER BY submit_date DESC');
-    // $stmt -> bind_param("sss", $firstname, $lastname, $email);
-
-    // $stmt->execute([$_GET['id']]);
-    // $reviews = $stmt->fetch(PDO::FETCH_ASSOC);
-    // // Get the overall rating and total amount of reviews
-    // $stmt = $pdo->prepare('SELECT AVG(rating) AS overall_rating, COUNT(*) AS total_reviews FROM reviews WHERE page_id = ?');
-    // $stmt->execute([$_GET['id']]);
-    // $reviews_info = $stmt->fetch(PDO::FETCH_ASSOC);
-} else {
-    exit('Invalid page ID.');
-}
+// $stmt->execute([$_GET['id']]);
+// $reviews = $stmt->fetch(PDO::FETCH_ASSOC);
+// // Get the overall rating and total amount of reviews
+// $stmt = $pdo->prepare('SELECT AVG(rating) AS overall_rating, COUNT(*) AS total_reviews FROM reviews WHERE page_id = ?');
+// $stmt->execute([$_GET['id']]);
+// $reviews_info = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,7 +107,7 @@ if (isset($_GET['id'])) {
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <?php include '../utils/navbar.php'; ?>     
+        <?php  ?>     
 
         <!-- Page Content -->
         <div class="container">
@@ -134,19 +135,47 @@ if (isset($_GET['id'])) {
                     <hr/>
                     <p class="card-text"><b>Key Information:</b><br/> <?php echo "{$ye->nodeValue}"; ?></p>
                     <p class="card-text" style="margin-bottom: 0.5rem;"><b>Country of Origin:</b><br/> <?php echo "{$yd->nodeValue}"; ?></p>
-                    <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span> 4.0 stars
                 </div>
                 </div>
                 <!-- /.card -->
 
                 <div class="card card-outline-secondary my-4">
                     <div class="card-header">
-                        Product Ratings
+                        Product Ratings <?php //echo $_GET['id'] . $_SESSION['user_id'] . $_POST['reviewMessage'] . $_POST['reviewRatings']; ?>
                     </div>
-                    <span class="heading" style="margin-top: 0.5rem; margin-left: 1rem;">User Rating</span>
-                    <span class="heading" style="margin-left: 1rem;"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></span>
-                    <p style="margin-top: 0.5rem; margin-left: 1rem;">4.1 average based on 254 reviews.</p>
-                    <hr style="border:3px solid #f1f1f1">
+                    <!-- <span class="heading" style="margin-top: 0.5rem; margin-left: 1rem;">User Rating</span> -->
+                    <?php 
+                        $stmt = $db->prepare("SELECT AVG(user_rating) AS overall_rating, COUNT(*) AS total_reviews FROM product_reviews WHERE product_id = ?");
+                        //print_r($db->error_list);
+                        $stmt->bind_param("s", $page_id);
+
+                        $page_id = $_GET['id'];
+                        $stmt->execute();
+                    ?>
+                    <span class="heading" style="margin-top: 1rem; margin-left: 1rem;">
+                    <?php 
+                        $result = $stmt->get_result();
+                        if ($result->num_rows > 0) {
+                            $reviews = $result->fetch_assoc();
+                            $checked = round($reviews["overall_rating"]);
+                            for ($i=0; $i<$checked; $i++) {
+                                echo "<i class=\"fa fa-star checked\"></i>";
+                            }
+
+                            for ($j=0; $j<5-$checked; $j++) {
+                                echo "<i class=\"fa fa-star\"></i>";
+                            }
+
+                            echo "<p style=\"margin-top: 0.5rem; margin-bottom: 0.5rem;\">" . number_format($reviews["overall_rating"], 1) . " average based on " . $reviews["total_reviews"] . " reviews.</p>";
+                        } else {
+                            for ($k=0; $k<5; $k++) {
+                                echo "<i class=\"fa fa-star\"></i>";
+                            }
+                            echo "<p>There is no review yet.</p><hr>";
+                        } 
+                    ?>
+                    </span>
+                    <!-- <hr style="border:3px solid #f1f1f1">
 
                     <div class="row-ratings">
                         <div class="side">
@@ -204,7 +233,7 @@ if (isset($_GET['id'])) {
                         <div class="side right">
                             <div>20</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="card card-outline-secondary my-4">
@@ -212,20 +241,40 @@ if (isset($_GET['id'])) {
                     Product Reviews
                 </div>
                 <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                    <hr>
-                    <form id="reviewForm" name="reviewForm">
+                    <?php
+                    // Get all reviews by the Page ID ordered by the submit date
+                    $stmt = $db->prepare("SELECT * FROM product_reviews WHERE product_id = ? ORDER BY submit_date DESC");
+                    $stmt->bind_param("s", $page_id);
+
+                    $page_id = $_GET['id'];
+                    $stmt->execute();
+
+                    $result = $stmt->get_result();
+                    if ($result->num_rows > 0) {
+                        while ($reviews = $result->fetch_assoc()) {
+                            echo "<p>" . $reviews["user_review"] . "</p><small class=\"text-muted\">" . time_elapsed_string($reviews["submit_date"]) . "</small><hr>";
+                        }
+                    } else {
+                        echo "<p>There is no review yet.</p><hr>";
+                    }
+                    ?>
+                    <form id="reviewForm" name="reviewForm" method="post" action="products_info.php?id=<?php echo $_GET['id']; ?>">
                         <textarea class="form-control" id="reviewMessage" name="reviewMessage" rows="3" placeholder="Message" required="required" data-validation-required-message="Please enter a message." style="margin-bottom: 0.5rem;"></textarea>
-                        <span class="heading"><i id="star1" onmouseover="color(1)" onmouseout="nocolor()" class="fa fa-star"></i> <i id="star2" onmouseover="color(2)" onmouseout="nocolor()" class="fa fa-star"></i> <i id="star3" onmouseover="color(3)" onmouseout="nocolor()" class="fa fa-star"></i> <i id="star4" onmouseover="color(4)" onmouseout="nocolor()" class="fa fa-star"></i> <i id="star5" onmouseover="color(5)" onmouseout="nocolor()" class="fa fa-star"></i></span>
+                        <span class="heading">
+                            <input type="hidden" id="star1_hidden" value="1">
+                            <i id="star1" onmouseover="toggle(this.id)" class="fa fa-star"></i> 
+                            <input type="hidden" id="star2_hidden" value="2">
+                            <i id="star2" onmouseover="toggle(this.id)" class="fa fa-star"></i> 
+                            <input type="hidden" id="star3_hidden" value="3">
+                            <i id="star3" onmouseover="toggle(this.id)" class="fa fa-star"></i> 
+                            <input type="hidden" id="star4_hidden" value="4">
+                            <i id="star4" onmouseover="toggle(this.id)" class="fa fa-star"></i> 
+                            <input type="hidden" id="star5_hidden" value="5">
+                            <i id="star5" onmouseover="toggle(this.id)" class="fa fa-star"></i>
+                        </span>
+                        <input type="hidden" name="reviewRatings" id="reviewRatings" value="0">
                         <p class="help-block text-danger" style="margin-bottom: 0.5rem;"></p>
-                        <button class="btn btn-primary" id="sendMessageButton" disabled>Leave a Review</button>
+                        <input type="submit" name="submit_btn" class="button btn btn-primary" id="submit_btn" value="Leave a Review" disabled />
                     </form>
                 </div>
                 </div>
@@ -256,38 +305,52 @@ if (isset($_GET['id'])) {
 
             const reviewHandler = function(e) {
                 if (e.target.value.length > 0) {
-                    document.getElementById("sendMessageButton").disabled = false;
+                    document.getElementById("submit_btn").disabled = false;
                 } else {
-                    document.getElementById("sendMessageButton").disabled = true;
+                    document.getElementById("submit_btn").disabled = true;
                 }
             }
 
             inputReview.addEventListener('input', reviewHandler);
             inputReview.addEventListener('propertychange', reviewHandler);
 
-            function color(num) {
-                switch (num) {
-                    case 5:
-                        document.getElementById("star5").style.color = "orange";
-                    case 4:
-                        document.getElementById("star4").style.color = "orange";
-                    case 3:
-                        document.getElementById("star3").style.color = "orange";
-                    case 2:
-                        document.getElementById("star2").style.color = "orange";
-                    case 1:
-                        document.getElementById("star1").style.color = "orange";
-                        break;
+            function toggle(id) {
+                var ab = document.getElementById(id+"_hidden").value;
+                document.getElementById("reviewRatings").value = ab;
+
+                for(var i=ab;i>=1;i--)
+                {
+                    //document.getElementById(cname+i).src="star2.png";
+                    document.getElementById("star"+i).style.color = "orange";
+                }
+                var id=parseInt(ab)+1;
+                for(var j=id;j<=5;j++)
+                {
+                    //document.getElementById(cname+j).src="star1.png";
+                    document.getElementById("star"+j).style.color = "black";
                 }
             }
 
-            function nocolor() {
-                document.getElementById("star5").style.color = "black";
-                document.getElementById("star4").style.color = "black";
-                document.getElementById("star3").style.color = "black";
-                document.getElementById("star2").style.color = "black";
-                document.getElementById("star1").style.color = "black";
-            }
+            // $(function() {
+            //     //alert("hey");
+            //     $('#reviewForm').on('submit', function(e) {
+            //         var formData = "id=GR0";
+            //         //e.preventDefault();
+            //         $.ajax({
+            //             url : $(this).attr('action') || window.location.pathname,
+            //             type: "POST",
+            //             data: formData,
+            //             success: function (data) {
+            //                 alert("Submitted!");
+            //             },
+            //             error: function (jXHR, textStatus, errorThrown) {
+            //                 alert(errorThrown);
+            //             }
+            //         });
+
+            //         return true;
+            //     });
+            // });
         </script>
     </body>
 </html>
