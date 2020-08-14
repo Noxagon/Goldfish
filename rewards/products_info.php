@@ -259,7 +259,7 @@ function time_elapsed_string($datetime, $full = false) {
                         echo "<p>There is no review yet.</p><hr>";
                     }
                     ?>
-                    <form id="reviewForm" name="reviewForm" method="post" action="products_info.php?id=<?php echo $_GET['id']; ?>">
+                    <form id="reviewForm" name="reviewForm" method="post" action="products_info.php?id=<?php echo $_GET['id']; ?>" <?php if (!isset($_SESSION['user_id'])) { echo "style=\"display: none;\""; } ?>>
                         <textarea class="form-control" id="reviewMessage" name="reviewMessage" rows="3" placeholder="Message" required="required" data-validation-required-message="Please enter a message." style="margin-bottom: 0.5rem;"></textarea>
                         <span class="heading">
                             <input type="hidden" id="star1_hidden" value="1">
@@ -275,7 +275,7 @@ function time_elapsed_string($datetime, $full = false) {
                         </span>
                         <input type="hidden" name="reviewRatings" id="reviewRatings" value="0">
                         <p class="help-block text-danger" style="margin-bottom: 0.5rem;"></p>
-                        <input type="submit" name="submit_btn" class="button btn btn-primary" id="submit_btn" value="Leave a Review" disabled />
+                        <input type="submit" name="submit_btn" class="button btn btn-primary" id="submit_btn" value="Leave a Review" disabled/>
                     </form>
                 </div>
                 </div>
@@ -331,27 +331,6 @@ function time_elapsed_string($datetime, $full = false) {
                     document.getElementById("star"+j).style.color = "black";
                 }
             }
-
-            // $(function() {
-            //     //alert("hey");
-            //     $('#reviewForm').on('submit', function(e) {
-            //         var formData = "id=GR0";
-            //         //e.preventDefault();
-            //         $.ajax({
-            //             url : $(this).attr('action') || window.location.pathname,
-            //             type: "POST",
-            //             data: formData,
-            //             success: function (data) {
-            //                 alert("Submitted!");
-            //             },
-            //             error: function (jXHR, textStatus, errorThrown) {
-            //                 alert(errorThrown);
-            //             }
-            //         });
-
-            //         return true;
-            //     });
-            // });
         </script>
     </body>
 </html>
