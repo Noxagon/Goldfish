@@ -173,10 +173,11 @@ function time_elapsed_string($datetime, $full = false) {
                             }
                             echo "<p>There is no review yet.</p><hr>";
                         } 
+
+                        $stmt -> close();
                     ?>
                     </span>
                     <!-- <hr style="border:3px solid #f1f1f1">
-
                     <div class="row-ratings">
                         <div class="side">
                             <div>5 star</div>
