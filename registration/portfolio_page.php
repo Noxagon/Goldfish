@@ -84,7 +84,7 @@
             <!-- Team Member 4 -->
             <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-0 shadow">
-                <img src="https://source.unsplash.com/ZI6p3i9SbVU/500x350" class="card-img-top" alt="...">
+                <img src="/Goldfish/assets/img/portfolio/ktl.jpeg" class="card-img-top" alt="...">
                 <div class="card-body text-center">
                 <h5 class="card-title mb-0">Kong Tai Long</h5>
                 <div class="card-text text-black-50">Web Developer</div>
