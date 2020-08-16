@@ -75,7 +75,9 @@ if (isset($_GET['logout'])) {
                         <ul class="dropdown-menu px-lg-4">
                             <li class="dropdown-list"><a href="#">Profile</a></li>
                             <li class="dropdown-list"> - Points: <?php if (isset($_SESSION['user_id'])){if ($stmt->fetch()) {echo $result;}} ?></li>
-                            <li class="divider"></li>
+                            <div class="dropdown-divider"></div>
+                            <li class="dropdown-list"><a href="/Goldfish/registration/update_page.php">Update</a></li>
+                            <div class="dropdown-divider"></div>
                             <li class="dropdown-list"><a href="/Goldfish/main_page.php?logout='1'">Logout</a></li>
                         </ul>
                     </li>

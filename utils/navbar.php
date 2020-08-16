@@ -81,7 +81,8 @@ function checkLogin()
             <ul class="navbar-nav ml-auto">
                 <?php if (dirname($_SERVER['PHP_SELF']) == "/Goldfish/rewards") : ?>
                     <form class="form-inline nav-item mx-0 mx-lg-1" style="margin-bottom: 0em;">
-                        <input class="form-control ml-sm-2" style="margin: 0rem 0rem;" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control ml-sm-2" style="margin: 0rem 0rem; padding-right: 1rem;" type="search" placeholder="Search" aria-label="Search">
+                        <button class="form-control ml-sm-2" type="submit" style="margin-left: 1rem;"><i class="fa fa-search"></i></button>
                     </form>
                 <?php endif ?>
 
@@ -93,7 +94,9 @@ function checkLogin()
                         <ul class="dropdown-menu px-lg-4">
                             <li class="dropdown-list"><a href="#">Profile</a></li>
                             <li class="dropdown-list"> - Points: <?php if (isset($_SESSION['user_id'])) { if ($stmt->fetch()) { echo $result; } } ?></li>
-                            <li class="divider"></li>
+                            <div class="dropdown-divider"></div>
+                            <li class="dropdown-list"><a href="/Goldfish/registration/update_page.php">Update</a></li>
+                            <div class="dropdown-divider"></div>
                             <li class="dropdown-list"><a href="/Goldfish/main_page.php?logout='1'">Logout</a></li>
                         </ul>
                     </li>

@@ -43,7 +43,7 @@
                     <p class="card-text">Origami is the art of paper folding, which is often associated with Japanese culture. In modern usage, the word "origami" is used as an inclusive term for all folding practices, regardless of their culture of origin.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="program_info.php" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
