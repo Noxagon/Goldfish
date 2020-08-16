@@ -5,7 +5,7 @@ if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || 
   exit();
 }
 
-$db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
+$db = new mysqli('localhost', 'root', '', 'goldfish');
 
 if ($db->connect_errno) {
   exit();
@@ -14,7 +14,7 @@ if ($db->connect_errno) {
 $stmt = $db->prepare("INSERT INTO user_feedback (user_name, user_email, user_phone, user_feedback) VALUES (?,?,?,?)");
 $stmt->bind_param("ssss", $name, $email, $phone, $message);
 
-// set parameters and execute
+// set parameters and execute (prevent injection)
 $name = strip_tags(htmlspecialchars($_POST['name']));
 $email = strip_tags(htmlspecialchars($_POST['email']));
 $phone = strip_tags(htmlspecialchars($_POST['phone']));
