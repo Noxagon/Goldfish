@@ -50,6 +50,39 @@ function checkLogin()
             break;
     }
 }
+if(isset($_GET['search'])){
+    $db = new mysqli('localhost', 'root', '', 'goldfish');
+
+    if ($db->connect_errno) {
+        die('Failed to connect to database!');
+    }
+
+    $stmt = $db->prepare("SELECT product_id FROM product_info WHERE product_name LIKE %?% ");
+    $stmt->bind_param("s", $search);
+
+    $search = $_POST["search"];
+    $stmt->execute();
+    $stmt->bind_result($result);
+    if ($stmt->fetch()) { 
+        header("location: /Goldfish/rewards/products_info.php?id='$result'");
+    }
+   
+
+}
+
+
+    // if(isset($_POST["submit"])){
+    //         $str = $_POST["search"];
+	//         $sth = $con->prepare("SELECT * FROM `search` WHERE product_name = '$str'");
+
+
+	//         $sth -> execute();
+    // }
+
+    // if ($row = $sth->fetch())
+    // {
+  
+    // }
 ?>
 
 <style>
@@ -80,8 +113,8 @@ function checkLogin()
 
             <ul class="navbar-nav ml-auto">
                 <?php if (dirname($_SERVER['PHP_SELF']) == "/Goldfish/rewards") : ?>
-                    <form class="form-inline nav-item mx-0 mx-lg-1" style="margin-bottom: 0em;">
-                        <input class="form-control ml-sm-2" style="margin: 0rem 0rem; padding-right: 1rem;" type="search" placeholder="Search" aria-label="Search">
+                    <form action="navbar.php" method="POST" class="form-inline nav-item mx-0 mx-lg-1" style="margin-bottom: 0em;">
+                        <input class="form-control ml-sm-2"  name="search" style="margin: 0rem 0rem; padding-right: 1rem;" type="search" placeholder="Search" aria-label="Search">
                         <button class="form-control ml-sm-2" type="submit" style="margin-left: 1rem;"><i class="fa fa-search"></i></button>
                     </form>
                 <?php endif ?>
