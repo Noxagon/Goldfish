@@ -101,19 +101,8 @@ if (isset($_GET['id'])) {
 
             <div class="col-md-6" style="margin-top: auto; margin-bottom: auto;">
                 <img class="card-img-top" src="<?php echo $url; ?>" alt="">
-            </div>
-
-            <div class="col-md-6">
-                <h3 class="my-3">Description</h3>
-                <p><?php echo $description; ?></p>
-
-                <h3 class="my-3">Schedule</h3>
-                <h5><?php echo $date_start; ?> - <?php echo $date_end; ?></h5>
-                <h5><?php echo $time_start; ?> - <?php echo $time_end; ?></h5>
-
-                <!-- <button type="button" id="" name="" class="button btn btn-primary ml-auto"><h5><i class="fab fa-bitcoin"></i> <?php echo $point; ?> Points</h5></button> -->
                 <?php if ($price > 0) : ?>
-                    <div id="paypal-button-container"></div>
+                    <div id="paypal-button-container" class="mt-5"></div>
                     <script src="https://www.paypal.com/sdk/js?client-id=AQ-gIccUkYgzY1gR2lxa-Fijjis24pM_-ky7w5LnX9j1IzifV64yBhlQNQ73rZ6JbOaUx_5FVGqtT-pw&currency=SGD" data-sdk-integration-source="button-factory"></script>
                     <script>
                         var amt = "<?php echo $price; ?>";
@@ -144,7 +133,24 @@ if (isset($_GET['id'])) {
                         }).render('#paypal-button-container');
                     </script>
                 <?php endif; ?>
-                <!-- <ul>
+            </div>
+
+            <div class="col-md-6">
+                <h6><?php echo $description; ?></h6>
+                <h3 class="my-1 mt-4"><u>Schedule</u></h3>
+                <h5><?php echo $date_start; ?> - <?php echo $date_end; ?> (<?php echo $time_start; ?> - <?php echo $time_end; ?>)</h5>
+
+                <h3 class="my-1 mt-4"><u>Location</u></h3>
+                <h5><?php echo $location; ?>
+
+                <?php if ($price > 0) : ?>
+                    <h3 class="my-1 mt-4"><u>Price</u></h3>
+                    <h5>SGD <?php echo $price; ?>
+                <?php endif; ?>
+
+                        <!-- <button type="button" id="" name="" class="button btn btn-primary ml-auto"><h5><i class="fab fa-bitcoin"></i> <?php echo $point; ?> Points</h5></button> -->
+
+                        <!-- <ul>
                     <li>Lorem Ipsum</li>
                     <li>Dolor Sit Amet</li>
                     <li>Consectetur</li>
