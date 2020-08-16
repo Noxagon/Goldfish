@@ -25,20 +25,3 @@ function toggle(id) {
         document.getElementById("star" + j).style.color = "black";
     }
 }
-
-// $(document).ready(function () {
-//     $("#reviewForm").submit(function(e) {
-//         e.preventDefault();
-//         $.ajax({
-//             url : $(this).attr('action') || window.location.pathname,
-//             type: "POST",
-//             data: $(this).serialize(),
-//             success: function (data) {
-//                 alert("Successful");
-//             },
-//             error: function (jXHR, textStatus, errorThrown) {
-//                 alert(errorThrown);
-//             }
-//         });
-//     });
-// });

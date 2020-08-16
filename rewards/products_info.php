@@ -3,11 +3,21 @@ include '../utils/navbar.php';
 
 // AJAX -PHP - XML 
 $xmlDoc = new DOMDocument();
-$db = new mysqli('localhost', 'root', '', 'goldfish');
+$db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
 
 if ($db->connect_errno) {
     die('Failed to connect to database!');
 }
+
+$stmt2 = $db->prepare("SELECT user_points FROM users WHERE user_id = ?");
+$stmt2->bind_param("s", $user_id);
+
+// set parameters and execute
+$user_id = $_SESSION['user_id'];
+$stmt2->execute();
+$stmt2->bind_result($result);
+
+$stmt2->close();
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -31,6 +41,7 @@ if (isset($_GET['id'])) {
 
     $xb = $xmlDoc->getElementsByTagName('POINTS');
     $yb = $xb->item($index);
+    $product_points = $yb->nodeValue;
 
     $xc = $xmlDoc->getElementsByTagName('URL');
     $yc = $xc->item($index);
@@ -133,8 +144,11 @@ function time_elapsed_string($datetime, $full = false)
                     <div class="card-body">
                         <hr />
                         <h3 class="card-title"><?php echo "{$ya->nodeValue}"; ?></h3>
-                        <!-- <h4><i class="fab fa-bitcoin"></i> <?php echo "{$yb->nodeValue}"; ?> Points</h4> -->
-                        <button type="button" id="" name="" class="button btn btn-primary ml-auto"><h5><i class="fab fa-bitcoin"></i> <?php echo "{$yb->nodeValue}"; ?> Points</h5></button>
+                        <button type="button" onclick="updatePoints(<?php echo $result; ?>, <?php echo $product_points; ?>))" id="claimBtn" name="claimBtn" class="button btn btn-primary ml-auto <?php if ($result <= $product_points) {
+                                                                                                                                                                                                        echo "disabled";
+                                                                                                                                                                                                    } ?>">
+                            <h5><i class="fab fa-bitcoin"></i> <?php echo "{$product_points}"; ?> Points</h5>
+                        </button>
                         <hr />
                         <p class="card-text"><b>Key Information:</b><br /> <?php echo "{$ye->nodeValue}"; ?></p>
                         <p class="card-text" style="margin-bottom: 0.5rem;"><b>Country of Origin:</b><br /> <?php echo "{$yd->nodeValue}"; ?></p>
@@ -305,6 +319,21 @@ function time_elapsed_string($datetime, $full = false)
     <!-- Core theme JS-->
     <script src="../js/scripts.js"></script>
     <script src="../js/product-scripts.js"></script>
+    <script>
+        function updatePoints(userPts, itemPts) {
+            <?php
+            $stmt = $db->prepare("UPDATE users SET user_points = ? WHERE user_id = ?");
+            $stmt->bind_param("ss", $user_points, $user_id);
+
+            $user_points = $result - $product_points;
+            $user_id = $_SESSION['user_id'];
+            $stmt->execute();
+
+            $stmt->close();
+            ?>
+            alert("Claimed!");
+        }
+    </script>
 </body>
 
 </html>

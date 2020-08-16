@@ -5,7 +5,7 @@ if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || 
   exit();
 }
 
-$db = new mysqli('localhost', 'root', '', 'goldfish');
+$db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
 
 if ($db->connect_errno) {
   exit();

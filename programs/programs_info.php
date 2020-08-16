@@ -1,7 +1,7 @@
 <?php
 include '../utils/navbar.php';
 
-$db = new mysqli('localhost', 'root', '', 'goldfish');
+$db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
 
 if ($db->connect_errno) {
     die('Failed to connect to database!');
@@ -44,6 +44,7 @@ if (isset($_GET['id'])) {
     foreach ($jsonIterator as $key => $val) {
         if (is_array($val)) {
             if ($key == $index) {
+                $prog_id = $val["id"];
                 $name = $val["type"];
                 $description = $val["description"];
                 $point = $val["point"];
@@ -60,6 +61,26 @@ if (isset($_GET['id'])) {
             }
         }
     }
+}
+
+if (isset($_POST['status'])) {
+    $stmt = $db->prepare("INSERT INTO program_members (program_id, user_id) VALUES (?,?)");
+    $stmt->bind_param("ss", $program_id, $user_id);
+
+    // set parameters and execute
+    $program_id = $prog_id;
+    $user_id = $_SESSION['user_id'];
+    $stmt->execute();
+
+    $stmt2 = $db->prepare("UPDATE users SET user_points = ? WHERE user_id = ?");
+    $stmt2->bind_param("ss", $program_points, $user_id);
+
+    $program_points = $point;
+    $user_id = $_SESSION['user_id'];
+    $stmt2->execute();
+
+    $stmt->close();
+    $stmt2->close();
 }
 ?>
 <!DOCTYPE html>
@@ -125,7 +146,18 @@ if (isset($_GET['id'])) {
                             },
                             onApprove: function(data, actions) {
                                 return actions.order.capture().then(function(details) {
-                                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                    // $.ajax({
+                                    //     url: $(this).attr('action') || window.location.pathname,
+                                    //     type: "POST",
+                                    //     data: {'status': 'approved'},
+                                    //     success: function(data) {
+                                    //         alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                    //     },
+                                    //     error: function(jXHR, textStatus, errorThrown) {
+                                    //         alert(errorThrown);
+                                    //     }
+                                    // });
+                                    $.post( $(this).attr('action'), { status: "approved" } );
                                 });
                             }
                         }).render('#paypal-button-container');
@@ -141,19 +173,12 @@ if (isset($_GET['id'])) {
                 <h3 class="my-1 mt-4"><u>Location</u></h3>
                 <h5><?php echo $location; ?>
 
-                <?php if ($price > 0) : ?>
-                    <h3 class="my-1 mt-4"><u>Price</u></h3>
-                    <h5>SGD <?php echo $price; ?>
-                <?php endif; ?>
+                    <?php if ($price > 0) : ?>
+                        <h3 class="my-1 mt-4"><u>Price</u></h3>
+                        <h5>SGD <?php echo $price; ?>
+                        <?php endif; ?>
 
                         <!-- <button type="button" id="" name="" class="button btn btn-primary ml-auto"><h5><i class="fab fa-bitcoin"></i> <?php echo $point; ?> Points</h5></button> -->
-
-                        <!-- <ul>
-                    <li>Lorem Ipsum</li>
-                    <li>Dolor Sit Amet</li>
-                    <li>Consectetur</li>
-                    <li>Adipiscing Elit</li>
-                </ul> -->
             </div>
 
         </div>
