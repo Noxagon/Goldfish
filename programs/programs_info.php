@@ -16,75 +16,50 @@ if (isset($_GET['id'])) {
 
     switch ($category) {
         case "AC":
-            $xmlDoc->load("../xml/grocery.xml");
+            $json = file_get_contents("../json/art_craft.json");
             break;
-        case "HW":
-            $xmlDoc->load("../xml/health.xml");
+        case "CK":
+            $json = file_get_contents("../json/cooking.json");
             break;
-        case "HL":
-            $xmlDoc->load("../xml/home.xml");
+        case "GM":
+            $json = file_get_contents("../json/games.json");
+            break;
+        case "MD":
+            $json = file_get_contents("../json/music_dance.json");
+            break;
+        case "SP":
+            $json = file_get_contents("../json/sport.json");
+            break;
+        case "WS":
+            $json = file_get_contents("../json/workshop.json");
             break;
     }
 
-    $xa = $xmlDoc->getElementsByTagName('NAME');
-    $ya = $xa->item($index);
+    // $data = json_decode($json, true); 
+    // echo $data[0]["id"];
 
-    $xb = $xmlDoc->getElementsByTagName('POINTS');
-    $yb = $xb->item($index);
+    $jsonIterator = new RecursiveIteratorIterator(
+        new RecursiveArrayIterator(json_decode($json, TRUE)),
+        RecursiveIteratorIterator::SELF_FIRST
+    );
 
-    $xc = $xmlDoc->getElementsByTagName('URL');
-    $yc = $xc->item($index);
-
-    $xd = $xmlDoc->getElementsByTagName('COUNTRY');
-    $yd = $xd->item($index);
-
-    $xe = $xmlDoc->getElementsByTagName('INFO');
-    $ye = $xe->item($index);
-
-    if (isset($_POST['reviewMessage'], $_POST['reviewRatings'])) {
-        // Insert a new review (user submitted form)
-        $stmt = $db->prepare("INSERT INTO product_reviews (product_id, user_id, user_review, user_rating, submit_date) VALUES (?,?,?,?,NOW())");
-        $stmt->bind_param("sssi", $product_id, $user_id, $user_review, $user_rating);
-
-        // set parameters and execute
-        $product_id = $_GET['id'];
-        $user_id = $_SESSION['user_id'];
-        $user_review = $_POST['reviewMessage'];
-        $user_rating = $_POST['reviewRatings'];
-        $stmt->execute();
-
-        $stmt->close();
+    foreach ($jsonIterator as $key => $val) {
+        if (is_array($val)) {
+            if ($key == $index) {
+                $name = $val["type"];
+                $description = $val["description"];
+                $point = $val["point"];
+                $price = $val["price"];
+                $date_start = $val["datestart"];
+                $date_end = $val["dateend"];
+                $time_start = $val["timestart"];
+                $time_end = $val["timeend"];
+                $location = $val["location"];
+                $url = $val["url"];
+            }
+        }
     }
-} else {
-    exit('Invalid page ID.');
 }
-
-// Reviews system + SQL (Jaron)
-// function time_elapsed_string($datetime, $full = false)
-// {
-//     $now = new DateTime(null, new DateTimeZone('Asia/Singapore'));
-//     $ago = new DateTime($datetime, new DateTimeZone('Asia/Singapore'));
-//     $diff = $now->diff($ago);
-//     $diff->w = floor($diff->d / 7);
-//     $diff->d -= $diff->w * 7;
-//     $string = array('y' => 'year', 'm' => 'month', 'w' => 'week', 'd' => 'day', 'h' => 'hour', 'i' => 'minute', 's' => 'second');
-//     foreach ($string as $k => &$v) {
-//         if ($diff->$k) {
-//             $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
-//         } else {
-//             unset($string[$k]);
-//         }
-//     }
-//     if (!$full) $string = array_slice($string, 0, 1);
-//     return $string ? implode(', ', $string) . ' ago' : 'just now';
-// }
-
-// $stmt->execute([$_GET['id']]);
-// $reviews = $stmt->fetch(PDO::FETCH_ASSOC);
-// // Get the overall rating and total amount of reviews
-// $stmt = $pdo->prepare('SELECT AVG(rating) AS overall_rating, COUNT(*) AS total_reviews FROM reviews WHERE page_id = ?');
-// $stmt->execute([$_GET['id']]);
-// $reviews_info = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -109,34 +84,69 @@ if (isset($_GET['id'])) {
 </head>
 
 <body id="page-top">
-    <!-- Navigation-->
-    <?php include '../utils/navbar.php'; ?>
 
     <!-- Page Content -->
     <div class="container">
 
         <!-- Portfolio Item Heading -->
-        <h1 class="my-4">Page Heading
-            <small>Secondary Text</small>
+        <h1 class="my-4"><?php echo $name ?>
+            <!-- <small>Secondary Text</small> -->
         </h1>
 
         <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div class="col-md-8">
-                <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+            <div class="col-md-6" style="margin-top: auto; margin-bottom: auto;">
+                <img class="img-fluid card-img-top" src="<?php echo $url; ?>" alt="">
             </div>
 
-            <div class="col-md-4">
-                <h3 class="my-3">Project Description</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-                <h3 class="my-3">Project Details</h3>
-                <ul>
+            <div class="col-md-6">
+                <h3 class="my-3">Description</h3>
+                <p><?php echo $description; ?></p>
+
+                <h3 class="my-3">Schedule</h3>
+                <h5><?php echo $date_start; ?> - <?php echo $date_end; ?></h5>
+                <h5><?php echo $time_start; ?> - <?php echo $time_end; ?></h5>
+
+                <!-- <button type="button" id="" name="" class="button btn btn-primary ml-auto"><h5><i class="fab fa-bitcoin"></i> <?php echo $point; ?> Points</h5></button> -->
+                <?php if ($price > 0) : ?>
+                    <div id="paypal-button-container"></div>
+                    <script src="https://www.paypal.com/sdk/js?client-id=AQ-gIccUkYgzY1gR2lxa-Fijjis24pM_-ky7w5LnX9j1IzifV64yBhlQNQ73rZ6JbOaUx_5FVGqtT-pw&currency=SGD" data-sdk-integration-source="button-factory"></script>
+                    <script>
+                        var amt = "<?php echo $price; ?>";
+
+                        paypal.Buttons({
+                            style: {
+                                shape: 'pill',
+                                color: 'gold',
+                                layout: 'vertical',
+                                label: 'paypal',
+
+                            },
+                            createOrder: function(data, actions) {
+                                return actions.order.create({
+                                    purchase_units: [{
+                                        amount: {
+                                            value: amt,
+                                            currency: "SGD"
+                                        }
+                                    }]
+                                });
+                            },
+                            onApprove: function(data, actions) {
+                                return actions.order.capture().then(function(details) {
+                                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                });
+                            }
+                        }).render('#paypal-button-container');
+                    </script>
+                <?php endif; ?>
+                <!-- <ul>
                     <li>Lorem Ipsum</li>
                     <li>Dolor Sit Amet</li>
                     <li>Consectetur</li>
                     <li>Adipiscing Elit</li>
-                </ul>
+                </ul> -->
             </div>
 
         </div>

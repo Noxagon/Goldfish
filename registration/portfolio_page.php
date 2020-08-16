@@ -22,16 +22,16 @@
 
 </head>
 
-<body id="page-top" onload="checkCookie()">
+<body id="page-top" class="bg-primary" onload="checkCookie()">
     <!-- Navigation-->
     <?php include "../utils/navbar.php"; ?>
 
     <!-- Page Content -->
     <div class="container">
         <!-- Portfolio Section Heading-->
-        <h1 class="page-section-heading text-center text-uppercase text-secondary mt-5 mb-0">Our Company</h1>
+        <h1 class="page-section-heading text-center text-uppercase text-white mt-5 mb-0">Our Company</h1>
         <!-- Icon Divider-->
-        <div class="divider-custom">
+        <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
             <div class="divider-custom-line"></div>
@@ -56,9 +56,9 @@
         </div>
 
         <!-- Portfolio Section Heading-->
-        <h1 class="page-section-heading text-center text-uppercase text-secondary mt-5 mb-0">Location</h1>
+        <h1 class="page-section-heading text-center text-uppercase text-white mt-5 mb-0">Location</h1>
         <!-- Icon Divider-->
-        <div class="divider-custom">
+        <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
             <div class="divider-custom-line"></div>
@@ -83,9 +83,9 @@
         </div>
 
         <!-- Portfolio Section Heading-->
-        <h1 class="page-section-heading text-center text-uppercase text-secondary mt-5 mb-0">About Us</h1>
+        <h1 class="page-section-heading text-center text-uppercase text-white mt-5 mb-0">About Us</h1>
         <!-- Icon Divider-->
-        <div class="divider-custom">
+        <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
             <div class="divider-custom-line"></div>
@@ -100,7 +100,7 @@
                         </div>
                         <div class="col-7 text-center" style="padding-left: 0rem;">
                             <h5 class="text-uppercase text-secondary card-title mt-3 mb-0">Jaron Lee Jin-An</h5>
-                            <div class="card-text text-black-50">P1844232</div>
+                            <h6 class="card-text text-black-50">P1844232</h6>
                             <hr />
                             <div class="card-text-2 text-black-50">
                                 <ul>
@@ -113,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Team Member 1 -->
+            <!-- Team Member 2 -->
             <div class="col-xl-6 col-md-6 mb-4">
                 <div class="card border-0 shadow">
                     <div class="row">
@@ -122,7 +122,7 @@
                         </div>
                         <div class="col-7 text-center" style="padding-left: 0rem;">
                             <h5 class="text-uppercase text-secondary card-title mt-3 mb-0">Lim Jun Ming Benjamin</h5>
-                            <div class="card-text text-black-50">P1822814</div>
+                            <h6 class="card-text text-black-50">P1822814</h6>
                             <hr />
                             <div class="card-text-2 text-black-50">
                                 <ul>
@@ -135,13 +135,13 @@
                     </div>
                 </div>
             </div>
-            <!-- Team Member 1 -->
+            <!-- Team Member 3 -->
             <div class="col-xl-6 col-md-6 mb-4">
                 <div class="card border-0 shadow">
                     <div class="row">
                         <div class="col-7 text-center" style="padding-right: 0rem;">
                             <h5 class="text-uppercase text-secondary card-title mt-3 mb-0">Chiok Yong Jie</h5>
-                            <div class="card-text text-black-50">Web Developer</div>
+                            <h6 class="card-text text-black-50">P1836419</h6>
                             <hr />
                             <div class="card-text-2 text-black-50">
                                 <ul>
@@ -157,13 +157,13 @@
                     </div>
                 </div>
             </div>
-            <!-- Team Member 1 -->
+            <!-- Team Member 4 -->
             <div class="col-xl-6 col-md-6 mb-4">
                 <div class="card border-0 shadow">
                     <div class="row">
                         <div class="col-7 text-center" style="padding-right: 0rem;">
                             <h5 class="text-uppercase text-secondary card-title mt-3 mb-0">Kong Tai Long</h5>
-                            <div class="card-text text-black-50">Web Developer</div>
+                            <h6 class="card-text text-black-50">P1820276</h6>
                             <hr />
                             <div class="card-text-2 text-black-50">
                                 <ul>

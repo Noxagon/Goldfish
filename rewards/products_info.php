@@ -3,7 +3,7 @@ include '../utils/navbar.php';
 
 // AJAX -PHP - XML (Jaron)
 $xmlDoc = new DOMDocument();
-$db = new mysqli('localhost', 'root', '', 'goldfish');
+$db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
 
 if ($db->connect_errno) {
     die('Failed to connect to database!');

@@ -25,3 +25,7 @@ body {
 .card-text-2 {
     text-align: start;
 }
+
+.divider-custom-line {
+    background-color: #ffffff;
+}

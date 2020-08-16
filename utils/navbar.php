@@ -6,7 +6,7 @@ if (dirname($_SERVER['PHP_SELF']) != "/Goldfish/registration") {
 if (!isset($_SESSION['user_id'])) {
     $_SESSION['msg'] = "You must log in first";
 } else {
-    $db = new mysqli('localhost', 'root', '', 'goldfish');
+    $db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
 
     if ($db->connect_errno) {
         die('Failed to connect to database!');
