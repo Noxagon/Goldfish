@@ -43,7 +43,7 @@
                     <p class="card-text">Chess is a two-player strategy board game played on a checkered board with 64 squares arranged in an 8×8 square grid.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=GM0" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=GM0" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <p class="card-text">Chapteh is a traditional Asian game which requires players to keep a weighted shuttlecock in the air, usually using their feet, although other parts of the body may also be used, except for the hands.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=GM1" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=GM1" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     <p class="card-text">Gasing is a term that refers to both the Malay spinning top and the game of top spinning. Gasing was a popular game played in the kampongs (“villages” in Malay) of Singapore and Malaysia, especially among members of the Malay community.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=GM2" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=GM2" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <p class="card-text">Also known as kelereng or guli, Goli is a game played with marbles. Made of either glass, clay, limestone, or plastic, the marbles are used to hit another players' marbles in an attempt to claim them.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=GM3" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=GM3" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>

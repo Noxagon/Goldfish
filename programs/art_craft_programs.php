@@ -43,7 +43,7 @@
                     <p class="card-text">Origami is the art of paper folding, which is often associated with Japanese culture. In modern usage, the word "origami" is used as an inclusive term for all folding practices, regardless of their culture of origin.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=AC0" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=AC0" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <p class="card-text">Floral design or flower arrangement is the art of using plant materials and flowers to create an eye-catching and balanced composition or display.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=AC1" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=AC1" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     <p class="card-text">Pottery teach the skills students need to create their own pieces of artwork, and cover topics ranging from art history to sculpture..</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=AC2" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=AC2" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <p class="card-text">Beaded jewellery commonly encompasses necklaces, bracelets, earrings, belts and rings. ... Bead embroidery, a popular type of handwork during the Victorian era, is enjoying a renaissance in modern jewellery Craft.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=AC3" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=AC3" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>

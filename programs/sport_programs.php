@@ -43,7 +43,7 @@
                     <p class="card-text">Yoga is a gentle way to improve your posture, balance, and coordination. Yoga is a systematic practice of physical exercise, breath control, relaxation, diet control, and positive thinking and meditation aimed at developing harmony in the body, mind, and environment.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=SP0" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=SP0" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <p class="card-text">Zumba is a fitness program that combines Latin and international music with dance moves.Zumba routines incorporate interval training, alternating fast and slow rhythms, imprvoing cardiovascular fitness.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=SP1" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=SP1" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     <p class="card-text">A brisk walk is a relative term, since “brisk” for some, is either slow or quite speedy for others, depending on levels of fitness.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=SP2" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=SP2" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <p class="card-text">Tai chi is a gentle exercise that helps seniors improve balance and prevent falls. It consists of making slow, graceful movements while breathing deeply..</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=SP3" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=SP3" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>

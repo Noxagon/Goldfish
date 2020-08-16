@@ -43,7 +43,7 @@
                     <p class="card-text">Terrarium Workshop is the ideal workshop for a team building session! Create your own mini garden in a jar during our terrarium team building session.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=WS0" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=WS0" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <p class="card-text">Introduction to Computer and Internet helps to remove the fear of using a computer for complete novices by using a simple, non-threatening approach to educating individuals in the basic skills of using a computer, email and the Internet. </p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=WS1" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=WS1" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     <p class="card-text">The Digital Workshop is the computer training solution for people who have too little time to accomplish what they need to do and even less to obtain the skills.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=WS2" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=WS2" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <p class="card-text">A set of coded instructions that a computer can understand to solve a problem or produce a desired result.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="program_info.php?id=WS3" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=WS3" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
