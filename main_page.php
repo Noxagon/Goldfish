@@ -4,7 +4,22 @@ session_start();
 if (!isset($_SESSION['user_id'])) {
     $_SESSION['msg'] = "You must log in first";
     //header('location: registration/login_page.php');
+} else {
+    $db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
+
+    if ($db->connect_errno) {
+        die('Failed to connect to database!');
+    }
+
+    $stmt = $db->prepare("SELECT user_points FROM users WHERE user_id = ?");
+    $stmt->bind_param("s", $user_id);
+
+    $user_id = $_SESSION['user_id'];
+    $stmt->execute();
+    $stmt->bind_result($result);
 }
+
+
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['user_id']);
@@ -56,12 +71,14 @@ if (isset($_GET['logout'])) {
                     <?php endif ?>
                     <?php if (isset($_SESSION['user_id'])) : ?>
                         <li class="dropdown nav-item mx-0 mx-lg-1">
-                            <a class="dropdown-toggle nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="dropdown" href="#"><i class="fas fa-user"></i> <?php echo $_SESSION['user_id'] ?><span class="caret"></span></a>
-                            <ul class="dropdown-menu px-lg-4">
-                                <li class="dropdown-list"><a href="#">Profile</a></li>
-                                <li class="dropdown-list"><a href="main_page.php?logout='1'">Logout</a></li>
-                            </ul>
-                        </li>
+                        <a class="dropdown-toggle nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="dropdown" href="#"><i class="fas fa-user"></i> <?php echo $_SESSION['user_id'] ?><span class="caret"></span></a>
+                        <ul class="dropdown-menu px-lg-4">
+                            <li class="dropdown-list"><a href="#">Profile</a></li>
+                            <li class="dropdown-list"> - Points: <?php if (isset($_SESSION['user_id'])){if ($stmt->fetch()) {echo $result;}} ?></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-list"><a href="/Goldfish/main_page.php?logout='1'">Logout</a></li>
+                        </ul>
+                    </li>
                     <?php endif ?>
                 </ul>
             </div>
@@ -221,28 +238,28 @@ if (isset($_GET['logout'])) {
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-0 pb-1">
                                 <label>Name</label>
-                                <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Name"/>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-0 pb-1">
                                 <label>Email Address</label>
-                                <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
+                                <input class="form-control" id="email" name="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-0 pb-1">
                                 <label>Phone Number</label>
-                                <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-0 pb-1">
                                 <label>Message</label>
-                                <textarea class="form-control" id="message" rows="3" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -464,7 +481,7 @@ if (isset($_GET['logout'])) {
                                 <!-- Portfolio Modal - Image-->
                                 <img class="img-fluid rounded mb-5" src="assets/img/programs/dance.jpg" alt="" />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-5">Come and join our dancing class for people who are keen in learning how to dance</p>
+                                <p class="mb-5">Come and join our dancing class for people who are keen in music and dance</p>
                                 <a href="programs/music_dance_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                             </div>
                         </div>
@@ -578,13 +595,7 @@ if (isset($_GET['logout'])) {
     <script src="assets/mail/contact_me.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <script>
-        // Activate scrollspy to add active class to navbar items on scroll
-        $('body').scrollspy({
-            target: '#mainNav',
-            offset: 80
-        });
-    </script>
+    <script src="js/main-scripts.js"></script>
 </body>
 
 </html>

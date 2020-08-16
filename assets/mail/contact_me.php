@@ -5,18 +5,31 @@ if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || 
   exit();
 }
 
+$db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
+
+if ($db->connect_errno) {
+  exit();
+}
+
+$stmt = $db->prepare("INSERT INTO user_feedback (user_name, user_email, user_phone, user_feedback) VALUES (?,?,?,?)");
+$stmt->bind_param("ssss", $name, $email, $phone, $message);
+
+// set parameters and execute
 $name = strip_tags(htmlspecialchars($_POST['name']));
 $email = strip_tags(htmlspecialchars($_POST['email']));
 $phone = strip_tags(htmlspecialchars($_POST['phone']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
+$stmt->execute();
+
+$stmt->close();
 
 // Create the email and send the message
-$to = "yourname@yourdomain.com"; // Add your email address in between the "" replacing yourname@yourdomain.com - This is where the form will send a message to.
-$subject = "Website Contact Form:  $name";
-$body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nMessage:\n$message";
-$header = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$header .= "Reply-To: $email";	
+// $to = "yourname@yourdomain.com"; // Add your email address in between the "" replacing yourname@yourdomain.com - This is where the form will send a message to.
+// $subject = "Website Contact Form:  $name";
+// $body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nMessage:\n$message";
+// $header = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+// $header .= "Reply-To: $email";	
 
-if(!mail($to, $subject, $body, $header))
-  http_response_code(500);
+// if(!mail($to, $subject, $body, $header))
+//   http_response_code(500);
 ?>

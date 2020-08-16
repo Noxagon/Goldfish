@@ -1,12 +1,25 @@
 <?php
-if (!dirname($_SERVER['PHP_SELF']) == "/Goldfish/registration") {
+if (dirname($_SERVER['PHP_SELF']) != "/Goldfish/registration") {
     session_start();
 }
 
 if (!isset($_SESSION['user_id'])) {
     $_SESSION['msg'] = "You must log in first";
-    //header('location: registration/login_page.php');
+} else {
+    $db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
+
+    if ($db->connect_errno) {
+        die('Failed to connect to database!');
+    }
+
+    $stmt = $db->prepare("SELECT user_points FROM users WHERE user_id = ?");
+    $stmt->bind_param("s", $user_id);
+
+    $user_id = $_SESSION['user_id'];
+    $stmt->execute();
+    $stmt->bind_result($result);
 }
+
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['user_id']);
@@ -79,7 +92,7 @@ function checkLogin()
                         <a class="dropdown-toggle nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" data-toggle="dropdown" href="#"><i class="fas fa-user"></i> <?php echo $_SESSION['user_id'] ?><span class="caret"></span></a>
                         <ul class="dropdown-menu px-lg-4">
                             <li class="dropdown-list"><a href="#">Profile</a></li>
-                            <li class="dropdown-list"> - Points: </li>
+                            <li class="dropdown-list"> - Points: <?php if (isset($_SESSION['user_id'])) { if ($stmt->fetch()) { echo $result; } } ?></li>
                             <li class="divider"></li>
                             <li class="dropdown-list"><a href="/Goldfish/main_page.php?logout='1'">Logout</a></li>
                         </ul>
