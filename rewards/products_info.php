@@ -1,9 +1,9 @@
 <?php
 include '../utils/navbar.php';
 
-// AJAX -PHP - XML (Jaron)
+// AJAX -PHP - XML 
 $xmlDoc = new DOMDocument();
-$db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
+$db = new mysqli('localhost', 'root', '', 'goldfish');
 
 if ($db->connect_errno) {
     die('Failed to connect to database!');

@@ -1,9 +1,7 @@
 <?php
 include '../utils/navbar.php';
 
-// AJAX -PHP - XML (Jaron)
-$xmlDoc = new DOMDocument();
-$db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
+$db = new mysqli('localhost', 'root', '', 'goldfish');
 
 if ($db->connect_errno) {
     die('Failed to connect to database!');
@@ -16,7 +14,7 @@ if (isset($_GET['id'])) {
 
     switch ($category) {
         case "AC":
-            $json = file_get_contents("../json/art_craft.json");
+            $json = file_get_contents("../json/art_craft.json"); //convert into iterator
             break;
         case "CK":
             $json = file_get_contents("../json/cooking.json");
