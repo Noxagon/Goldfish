@@ -69,20 +69,6 @@ if(isset($_GET['search'])){
         header("location: /Goldfish/rewards/products_info.php?id=$result");
     }
 }
-
-
-    // if(isset($_POST["submit"])){
-    //         $str = $_POST["search"];
-	//         $sth = $con->prepare("SELECT * FROM `search` WHERE product_name = '$str'");
-
-
-	//         $sth -> execute();
-    // }
-
-    // if ($row = $sth->fetch())
-    // {
-  
-    // }
 ?>
 
 <style>

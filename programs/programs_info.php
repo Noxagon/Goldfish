@@ -56,6 +56,9 @@ if (isset($_GET['id'])) {
                 $time_end = $val["timeend"];
                 $location = $val["location"];
                 $url = $val["url"];
+            } else {
+                $images[$key] = $val["url"];
+                $code[$key] = $val["id"];
             }
         }
     }
@@ -97,7 +100,7 @@ if (isset($_GET['id'])) {
         <div class="row">
 
             <div class="col-md-6" style="margin-top: auto; margin-bottom: auto;">
-                <img class="img-fluid card-img-top" src="<?php echo $url; ?>" alt="">
+                <img class="card-img-top" src="<?php echo $url; ?>" alt="">
             </div>
 
             <div class="col-md-6">
@@ -157,29 +160,37 @@ if (isset($_GET['id'])) {
 
         <div class="row">
 
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                    <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
+            <?php if (isset($images[0])) : ?>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <a href="programs_info.php?id=<?php echo $code[0]; ?>">
+                        <img class="img-fluid" src="<?php echo $images[0]; ?>" alt="">
+                    </a>
+                </div>
+            <?php endif; ?>
 
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                    <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
+            <?php if (isset($images[1])) : ?>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <a href="programs_info.php?id=<?php echo $code[1]; ?>">
+                        <img class="img-fluid" src="<?php echo $images[1]; ?>" alt="">
+                    </a>
+                </div>
+            <?php endif; ?>
 
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                    <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
+            <?php if (isset($images[2])) : ?>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <a href="programs_info.php?id=<?php echo $code[2]; ?>">
+                        <img class="img-fluid" src="<?php echo $images[2]; ?>" alt="">
+                    </a>
+                </div>
+            <?php endif; ?>
 
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                    <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
+            <?php if (isset($images[3])) : ?>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <a href="programs_info.php?id=<?php echo $code[3]; ?>">
+                        <img class="img-fluid" src="<?php echo $images[3]; ?>" alt="">
+                    </a>
+                </div>
+            <?php endif; ?>
 
         </div>
         <!-- /.row -->
