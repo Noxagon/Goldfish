@@ -78,13 +78,6 @@ function time_elapsed_string($datetime, $full = false)
     if (!$full) $string = array_slice($string, 0, 1);
     return $string ? implode(', ', $string) . ' ago' : 'just now';
 }
-
-// $stmt->execute([$_GET['id']]);
-// $reviews = $stmt->fetch(PDO::FETCH_ASSOC);
-// // Get the overall rating and total amount of reviews
-// $stmt = $pdo->prepare('SELECT AVG(rating) AS overall_rating, COUNT(*) AS total_reviews FROM reviews WHERE page_id = ?');
-// $stmt->execute([$_GET['id']]);
-// $reviews_info = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">

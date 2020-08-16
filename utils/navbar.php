@@ -50,24 +50,24 @@ function checkLogin()
             break;
     }
 }
+
 if(isset($_GET['search'])){
-    $db = new mysqli('localhost', 'root', '', 'goldfish');
+    $db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
 
     if ($db->connect_errno) {
         die('Failed to connect to database!');
     }
 
-    $stmt = $db->prepare("SELECT product_id FROM product_info WHERE product_name LIKE %?% ");
+    $stmt = $db->prepare("SELECT product_id FROM product_info WHERE product_name LIKE ? ");
+    print_r($db->error_list);
     $stmt->bind_param("s", $search);
 
-    $search = $_POST["search"];
+    $search = "%" . $_GET["search"] . "%";
     $stmt->execute();
     $stmt->bind_result($result);
     if ($stmt->fetch()) { 
-        header("location: /Goldfish/rewards/products_info.php?id='$result'");
+        header("location: /Goldfish/rewards/products_info.php?id=$result");
     }
-   
-
 }
 
 
@@ -113,7 +113,7 @@ if(isset($_GET['search'])){
 
             <ul class="navbar-nav ml-auto">
                 <?php if (dirname($_SERVER['PHP_SELF']) == "/Goldfish/rewards") : ?>
-                    <form action="navbar.php" method="POST" class="form-inline nav-item mx-0 mx-lg-1" style="margin-bottom: 0em;">
+                    <form id="searchForm" name="searchForm" class="form-inline nav-item mx-0 mx-lg-1" style="margin-bottom: 0em;">
                         <input class="form-control ml-sm-2"  name="search" style="margin: 0rem 0rem; padding-right: 1rem;" type="search" placeholder="Search" aria-label="Search">
                         <button class="form-control ml-sm-2" type="submit" style="margin-left: 1rem;"><i class="fa fa-search"></i></button>
                     </form>
@@ -140,3 +140,22 @@ if(isset($_GET['search'])){
         </div>
     </div>
 </nav>
+
+<script>
+$(document).ready(function () {
+    $("#searchForm").submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            url : $(this).attr('action') || window.location.pathname,
+            type: "POST",
+            data: $(this).serialize(),
+            success: function (data) {
+                alert("Successful");
+            },
+            error: function (jXHR, textStatus, errorThrown) {
+                alert(errorThrown);
+            }
+        });
+    });
+});
+</script>
