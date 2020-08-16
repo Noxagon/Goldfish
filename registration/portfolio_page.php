@@ -29,7 +29,7 @@
     <!-- Page Content -->
     <div class="container">
         <!-- Portfolio Section Heading-->
-        <h1 class="page-section-heading text-center text-uppercase text-secondary mb-0">About Us</h1>
+        <h1 class="page-section-heading text-center text-uppercase text-secondary mt-5 mb-0">Our Company</h1>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -37,81 +37,32 @@
             <div class="divider-custom-line"></div>
         </div>
         <div class="row">
-            <!-- Team Member 1 -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <div class="col-xl-12 col-md-12 mb-4 h-100">
                 <div class="card border-0 shadow">
-                    <img src="/Goldfish/assets/img/portfolio/jaron.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Jaron Lee Jin-An</h5>
-                        <div class="card-text text-black-50">P1844232</div>
-                        <hr />
-                        <div class="card-text-2 text-black-50">
-                            <ul>
-                                <li>Student</li>
-                                <li>Web Developer</li>
-                                <li></li>
-                            </ul>
+                    <div class="row">
+                        <div class="col-7 align-self-center text-center">
+                        <h1 class="text-uppercase text-secondary">Goldfish</h1>
+                        <hr/>
+                            <h4 class=" text-uppercase text-secondary">
+                                We are a group of students from Singapore Polytechnic, developing a website to help the elderly to lead active and dignified lives in the silver years.
+                            </h4>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Team Member 2 -->
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-0 shadow">
-                    <img src="/Goldfish/assets/img/portfolio/ben.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Benjamin Lim</h5>
-                        <div class="card-text text-black-50">P1822814</div>
-                        <hr />
-                        <div class="card-text-2 text-black-50">
-                            <ul>
-                                <li>Student</li>
-                                <li>Web Developer</li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Team Member 3 -->
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-0 shadow">
-                    <img src="/Goldfish/assets/img/portfolio/cyj.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Chiok Yong Jie</h5>
-                        <div class="card-text text-black-50">Web Developer</div>
-                        <hr />
-                        <div class="card-text-2 text-black-50">
-                            <ul>
-                                <li>Student</li>
-                                <li>Web Developer</li>
-                                <li></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Team Member 4 -->
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-0 shadow">
-                    <img src="/Goldfish/assets/img/portfolio/ktl.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Kong Tai Long</h5>
-                        <div class="card-text text-black-50">Web Developer</div>
-                        <hr />
-                        <div class="card-text-2 text-black-50">
-                            <ul>
-                                <li>Student</li>
-                                <li>Web Developer</li>
-                                <li></li>
-                            </ul>
+                        <div class="col-5">
+                        <img src="/Goldfish/assets/img/goldfish/goldfish.png" class="card-img-top" alt="..." style="padding: 1rem; height: 450px; object-fit: scale-down;">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- /.row -->
 
+        <!-- Portfolio Section Heading-->
+        <h1 class="page-section-heading text-center text-uppercase text-secondary mt-5 mb-0">Location</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
         <div class="row">
             <div class="col-xl-12 col-md-12 mb-4 h-100">
                 <div class="card border-0 shadow">
@@ -122,30 +73,131 @@
                         <div class="col-lg-5 ml-auto align-self-center">
                             <h2 class="text-uppercase text-secondary">Address: </h2>
                             <h4 class=" text-uppercase text-secondary">
-                                500 Dover Road, <br/>
+                                500 Dover Road, <br />
                                 Singapore 139651.
                             </h4>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- AIzaSyAJzn_eurY-R1yVXDbYer5ukJvSnYVYPBY -->
         </div>
-        <!-- /.container -->
 
-        <?php include "../utils/footer.php"; ?>
+        <!-- Portfolio Section Heading-->
+        <h1 class="page-section-heading text-center text-uppercase text-secondary mt-5 mb-0">About Us</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <div class="row">
+            <!-- Team Member 1 -->
+            <div class="col-xl-6 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <div class="row">
+                        <div class="col-5" style="padding-right: 0rem;">
+                            <img src="/Goldfish/assets/img/portfolio/jaron.jpeg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="col-7 text-center" style="padding-left: 0rem;">
+                            <h5 class="text-uppercase text-secondary card-title mt-3 mb-0">Jaron Lee Jin-An</h5>
+                            <div class="card-text text-black-50">P1844232</div>
+                            <hr />
+                            <div class="card-text-2 text-black-50">
+                                <ul>
+                                    <li>Student</li>
+                                    <li>Web Developer</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 1 -->
+            <div class="col-xl-6 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <div class="row">
+                        <div class="col-5" style="padding-right: 0rem;">
+                            <img src="/Goldfish/assets/img/portfolio/ben.jpeg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="col-7 text-center" style="padding-left: 0rem;">
+                            <h5 class="text-uppercase text-secondary card-title mt-3 mb-0">Lim Jun Ming Benjamin</h5>
+                            <div class="card-text text-black-50">P1822814</div>
+                            <hr />
+                            <div class="card-text-2 text-black-50">
+                                <ul>
+                                    <li>Student</li>
+                                    <li>Web Developer</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 1 -->
+            <div class="col-xl-6 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <div class="row">
+                        <div class="col-7 text-center" style="padding-right: 0rem;">
+                            <h5 class="text-uppercase text-secondary card-title mt-3 mb-0">Chiok Yong Jie</h5>
+                            <div class="card-text text-black-50">Web Developer</div>
+                            <hr />
+                            <div class="card-text-2 text-black-50">
+                                <ul>
+                                    <li>Student</li>
+                                    <li>Web Developer</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-5" style="padding-left: 0rem;">
+                            <img src="/Goldfish/assets/img/portfolio/cyj.jpeg" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 1 -->
+            <div class="col-xl-6 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                    <div class="row">
+                        <div class="col-7 text-center" style="padding-right: 0rem;">
+                            <h5 class="text-uppercase text-secondary card-title mt-3 mb-0">Kong Tai Long</h5>
+                            <div class="card-text text-black-50">Web Developer</div>
+                            <hr />
+                            <div class="card-text-2 text-black-50">
+                                <ul>
+                                    <li>Student</li>
+                                    <li>Web Developer</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-5" style="padding-left: 0rem;">
+                            <img src="/Goldfish/assets/img/portfolio/ktl.jpeg" class="card-img-top" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
-        <script src="../assets/mail/jqBootstrapValidation.js"></script>
-        <script src="../assets/mail/contact_me.js"></script>
-        <!-- Core theme JS-->
-        <script src="../js/login-scripts.js"></script>
+        <!-- AIzaSyAJzn_eurY-R1yVXDbYer5ukJvSnYVYPBY -->
+    </div>
+    <!-- /.container -->
+
+    <?php include "../utils/footer.php"; ?>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Contact form JS-->
+    <script src="../assets/mail/jqBootstrapValidation.js"></script>
+    <script src="../assets/mail/contact_me.js"></script>
+    <!-- Core theme JS-->
+    <script src="../js/login-scripts.js"></script>
 </body>
 
 </html>
