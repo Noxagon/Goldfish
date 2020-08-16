@@ -43,7 +43,7 @@
                     <p class="card-text">Karaoke is a type of dining interactive entertainment which an amateur singer sings along with recorded music using a microphone.The music is normally an instrumental version of a well-known popular song.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="program_info.php?id=MD0" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <p class="card-text">Hokkien opera, is the traditional drama form originated in Taiwan. ... Its earliest form adopted elements of folk songs from Zhangzhou, Fujian, China.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="program_info.php?id=MD1" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     <p class="card-text">Latin dance is a general label, and a term in partner dance.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="program_info.php?id=MD2" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <p class="card-text">The angklung is a musical instrument from West Java, Indonesia made of a varying number of bamboo tubes attached to a bamboo frame. The tubes are carved to have a resonant pitch when struck and are tuned to octaves, similar to Western handbells. </p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="program_info.php?id=MD3" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>

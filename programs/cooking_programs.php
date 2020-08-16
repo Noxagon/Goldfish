@@ -43,7 +43,7 @@
                     <p class="card-text">A macaron is a sweet meringue-based confection made with egg white, icing sugar, granulated sugar, almond meal, and food colouring.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="program_info.php?id=CK0" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <p class="card-text">Cake is a form of sweet food made from flour, sugar, and other ingredients, that is usually baked. In their oldest forms, cakes were modifications of bread, but cakes now cover a wide range of preparations that can be simple or elaborate, and that share features with other desserts such as pastries, meringues, custards, and pies.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="program_info.php?id=CK1" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     <p class="card-text">Thai cooking places emphasis on lightly prepared dishes with strong aromatic components and a spicy edge.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="program_info.php?id=CK2" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <p class="card-text">French cuisine developed throughout the centuries influenced by the many surrounding cultures of Spain, Italy, Switzerland, Germany and Belgium.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="program_info.php?id=CK3" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
