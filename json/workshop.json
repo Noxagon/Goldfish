@@ -1,0 +1,54 @@
+[
+   {
+      "activity":"Workshop",
+      "type":"Terraium Workshop",
+      "description":"Terrarium Workshop is the ideal workshop for a team building session! Create your own mini garden in a jar during our terrarium team building session.",
+      "point":"6",
+      "price":"$60.00",
+      "datestart":"02 Oct 2020",
+      "dateend":"28 Oct 2020",
+      "timestart":"01:00pm",
+      "timeend":"04:00pm",
+      "location":"Katong Community Club,Singapore",
+      "url":"https://mk0thefunempireuxo6i.kinstacdn.com/wp-content/uploads/2019/05/Group-Terrarium_Landscape-1-300x200.jpg"
+   },
+   {
+      "activity":"Workshop",
+      "type":"Computer and Internet Workshop",
+      "description":"Introduction to Computer and Internet helps to remove the fear of using a computer for complete novices by using a simple, non-threatening approach to educating individuals in the basic skills of using a computer, email and the Internet.",
+      "point":"6",
+      "price":"$60.00",
+      "datestart":"02 Sept 2020",
+      "dateend":"24 Sept 2020",
+      "timestart":"10:00am",
+      "timeend":"01:00pm",
+      "location":"Kallang Community Club,Singapore",
+      "url":"https://coursemology.sg/wp-content/uploads/2018/05/introduction-to-computer-and-internet.jpg"
+   },
+   {
+      "activity":"Workshop",
+      "type":"Digital Workshop",
+      "description":"The Digital Workshop is the computer training solution for people who have too little time to accomplish what they need to do and even less to obtain the skills.",
+      "point":"6",
+      "price":"$60.00",
+      "datestart":"05 Sept 2020",
+      "dateend":"20 Sept 2020",
+      "timestart":"10:00am",
+      "timeend":"01:00pm",
+      "location":"Queenstown Community Club,Singapore",
+      "url":"https://www.straitstimes.com/sites/default/files/styles/article_pictrure_780x520_/public/articles/2018/05/30/as-epay3005.jpg?itok=85zzAuc8&timestamp=1527657329"
+   },
+   {
+      "activity":"Workshop",
+      "type":"Simple IT Programme Class",
+      "description":"A set of coded instructions that a computer can understand to solve a problem or produce a desired result.",
+      "point":"6",
+      "price":"$60.00",
+      "datestart":"10 Oct 2020",
+      "dateend":"25 Oct 2020",
+      "timestart":"10:00am",
+      "timeend":"01:00pm",
+      "location":"Woodlands Community Club,Singapore",
+      "url":"https://rsvp.org.sg/wp-content/uploads/2019/04/Training-homepage.jpg"
+   }
+]

@@ -1,0 +1,54 @@
+[
+   {
+      "activity":"Sport",
+      "type":"Yoga",
+      "description":"Yoga is a gentle way to improve your posture, balance, and coordination. Yoga is a systematic practice of physical exercise, breath control, relaxation, diet control, and positive thinking and meditation aimed at developing harmony in the body, mind, and environment.",
+      "point":"3",
+      "price":"$25.00",
+      "datestart":"10 Sept 2020",
+      "dateend":"25 Sept 2020",
+      "timestart":"09:00am",
+      "timeend":"12:00pm",
+      "location":"Woodlands Community Club,Singapore",
+      "url":"https://tirisulayoga.com/wp-content/uploads/2018/06/seniors-yoga-teacher-training.jpg"
+   },
+   {
+      "activity":"Sport",
+      "type":"Zumba Workout",
+      "description":"Zumba is a fitness program that combines Latin and international music with dance moves.Zumba routines incorporate interval training, alternating fast and slow rhythms, imprvoing cardiovascular fitness.",
+      "point":"4",
+      "price":"$45.00",
+      "datestart":"12 Oct 2020",
+      "dateend":"27 Oct 2020",
+      "timestart":"10:00am",
+      "timeend":"12:00pm",
+      "location":"Katong Community Club,Singapore",
+      "url":"http://learn.healthpro.com/wp-content/uploads/2015/01/shutterstock_223713133-zumba-gold-resize-620x340.jpg"
+   },
+   {
+      "activity":"Sport",
+      "type":"Brisk Walk",
+      "description":"A brisk walk is a relative term, since “brisk” for some, is either slow or quite speedy for others, depending on levels of fitness.",
+      "point":"2",
+      "price":"$10.00",
+      "datestart":"01 Oct 2020",
+      "dateend":"15 Oct 2020",
+      "timestart":"07:30am",
+      "timeend":"11:00am",
+      "location":"Sembawang  Community Club,Singapore",
+      "url":"https://www.straitstimes.com/sites/default/files/styles/article_pictrure_780x520_/public/articles/2019/03/17/ST_20190317_XWALK_4698058.jpg?itok=vi_O1XpE&timestamp=1552759208"
+   },
+   {
+      "activity":"Sport",
+      "type":"Tai Chi",
+      "description":"Tai chi is a gentle exercise that helps seniors improve balance and prevent falls. It consists of making slow, graceful movements while breathing deeply",
+      "point":"2",
+      "price":"$10.00",
+      "datestart":"02 Dec 2020",
+      "dateend":"29 Dec 2020",
+      "timestart":"07:30am",
+      "timeend":"9:30am",
+      "location":"Gek Poh Ville Community Club,Singapore",
+      "url":"https://www.channelnewsasia.com/blueprint/servlet/image/7935848/16x9/1920/1080/203e06328502cc27f8d769932ab94964/vx/senior-citizens-doing-taichi---2079180.png"
+   }
+]

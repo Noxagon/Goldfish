@@ -1,3 +1,91 @@
+<?php
+include '../utils/navbar.php';
+
+// AJAX -PHP - XML (Jaron)
+$xmlDoc = new DOMDocument();
+$db = new mysqli('localhost', 'root', '', 'goldfish', '3308');
+
+if ($db->connect_errno) {
+    die('Failed to connect to database!');
+}
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $category = substr($id, 0, 2);
+    $index = substr($id, -1);
+
+    switch ($category) {
+        case "AC":
+            $xmlDoc->load("../xml/grocery.xml");
+            break;
+        case "HW":
+            $xmlDoc->load("../xml/health.xml");
+            break;
+        case "HL":
+            $xmlDoc->load("../xml/home.xml");
+            break;
+    }
+
+    $xa = $xmlDoc->getElementsByTagName('NAME');
+    $ya = $xa->item($index);
+
+    $xb = $xmlDoc->getElementsByTagName('POINTS');
+    $yb = $xb->item($index);
+
+    $xc = $xmlDoc->getElementsByTagName('URL');
+    $yc = $xc->item($index);
+
+    $xd = $xmlDoc->getElementsByTagName('COUNTRY');
+    $yd = $xd->item($index);
+
+    $xe = $xmlDoc->getElementsByTagName('INFO');
+    $ye = $xe->item($index);
+
+    if (isset($_POST['reviewMessage'], $_POST['reviewRatings'])) {
+        // Insert a new review (user submitted form)
+        $stmt = $db->prepare("INSERT INTO product_reviews (product_id, user_id, user_review, user_rating, submit_date) VALUES (?,?,?,?,NOW())");
+        $stmt->bind_param("sssi", $product_id, $user_id, $user_review, $user_rating);
+
+        // set parameters and execute
+        $product_id = $_GET['id'];
+        $user_id = $_SESSION['user_id'];
+        $user_review = $_POST['reviewMessage'];
+        $user_rating = $_POST['reviewRatings'];
+        $stmt->execute();
+
+        $stmt->close();
+    }
+} else {
+    exit('Invalid page ID.');
+}
+
+// Reviews system + SQL (Jaron)
+// function time_elapsed_string($datetime, $full = false)
+// {
+//     $now = new DateTime(null, new DateTimeZone('Asia/Singapore'));
+//     $ago = new DateTime($datetime, new DateTimeZone('Asia/Singapore'));
+//     $diff = $now->diff($ago);
+//     $diff->w = floor($diff->d / 7);
+//     $diff->d -= $diff->w * 7;
+//     $string = array('y' => 'year', 'm' => 'month', 'w' => 'week', 'd' => 'day', 'h' => 'hour', 'i' => 'minute', 's' => 'second');
+//     foreach ($string as $k => &$v) {
+//         if ($diff->$k) {
+//             $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+//         } else {
+//             unset($string[$k]);
+//         }
+//     }
+//     if (!$full) $string = array_slice($string, 0, 1);
+//     return $string ? implode(', ', $string) . ' ago' : 'just now';
+// }
+
+// $stmt->execute([$_GET['id']]);
+// $reviews = $stmt->fetch(PDO::FETCH_ASSOC);
+// // Get the overall rating and total amount of reviews
+// $stmt = $pdo->prepare('SELECT AVG(rating) AS overall_rating, COUNT(*) AS total_reviews FROM reviews WHERE page_id = ?');
+// $stmt->execute([$_GET['id']]);
+// $reviews_info = $stmt->fetch(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
