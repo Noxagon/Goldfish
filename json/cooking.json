@@ -1,6 +1,7 @@
 [
    {
       "activity":"Cooking",
+      "id":"CK0",
       "type":"Macaron-making class",
       "description":"A macaron is a sweet meringue-based confection made with egg white, icing sugar, granulated sugar, almond meal, and food colouring.",
       "point":"7",
@@ -14,6 +15,7 @@
    },
    {
       "activity":"Cooking",
+      "id":"CK1",
       "type":"Cake-making class",
       "description":"Cake is a form of sweet food made from flour, sugar, and other ingredients, that is usually baked. In their oldest forms, cakes were modifications of bread, but cakes now cover a wide range of preparations that can be simple or elaborate, and that share features with other desserts such as pastries, meringues, custards, and pies.",
       "point":"6",
@@ -27,6 +29,7 @@
    },
    {
       "activity":"Cooking",
+      "id":"CK2",
       "type":"Thai Cooking Class",
       "description":"Thai cooking places emphasis on lightly prepared dishes with strong aromatic components and a spicy edge.",
       "point":"6",
@@ -40,6 +43,7 @@
    },
    {
       "activity":"Cooking",
+      "id":"CK3",
       "type":"French Cooking Class",
       "description":"French cuisine developed throughout the centuries influenced by the many surrounding cultures of Spain, Italy, Switzerland, Germany and Belgium.",
       "point":"8",

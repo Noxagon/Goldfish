@@ -1,6 +1,7 @@
 [
    {
       "activity":"Workshop",
+      "id":"WS0",
       "type":"Terraium Workshop",
       "description":"Terrarium Workshop is the ideal workshop for a team building session! Create your own mini garden in a jar during our terrarium team building session.",
       "point":"6",
@@ -14,6 +15,7 @@
    },
    {
       "activity":"Workshop",
+      "id":"WS1",
       "type":"Computer and Internet Workshop",
       "description":"Introduction to Computer and Internet helps to remove the fear of using a computer for complete novices by using a simple, non-threatening approach to educating individuals in the basic skills of using a computer, email and the Internet.",
       "point":"6",
@@ -27,6 +29,7 @@
    },
    {
       "activity":"Workshop",
+      "id":"WS2",
       "type":"Digital Workshop",
       "description":"The Digital Workshop is the computer training solution for people who have too little time to accomplish what they need to do and even less to obtain the skills.",
       "point":"6",
@@ -40,6 +43,7 @@
    },
    {
       "activity":"Workshop",
+      "id":"WS3",
       "type":"Simple IT Programme Class",
       "description":"A set of coded instructions that a computer can understand to solve a problem or produce a desired result.",
       "point":"6",

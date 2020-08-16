@@ -1,6 +1,7 @@
 [
    {
       "activity":"Music & Dance",
+      "id":"MD0",
       "type":"Karaoke Singing",
       "description":"Karaoke is a type of dining interactive entertainment which an amateur singer sings along with recorded music using a microphone.The music is normally an instrumental version of a well-known popular song.",
       "point":"2",
@@ -14,6 +15,7 @@
    },
    {
       "activity":"Music & Dance",
+      "id":"MD1",
       "type":"Hokkien Opera",
       "description":"Hokkien opera, is the traditional drama form originated in Taiwan .Its earliest form adopted elements of folk songs from Zhangzhou, Fujian, China.",
       "point":"2",
@@ -27,6 +29,7 @@
    },
    {
       "activity":"Music & Dance",
+      "id":"MD2",
       "type":"Ballroom dance",
       "description":"Latin dance is a general label, and a term in partner dance.",
       "point":"3",
@@ -40,6 +43,7 @@
    },
    {
       "activity":"Music & Dance",
+      "id":"MD3",
       "type":"Angklung Class",
       "description":"The angklung is a musical instrument from West Java, Indonesia made of a varying number of bamboo tubes attached to a bamboo frame. The tubes are carved to have a resonant pitch when struck and are tuned to octaves, similar to Western handbells.",
       "point":"2",
