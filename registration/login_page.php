@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Goldfish - Register</title>
+        <title>Goldfish - Login</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -19,7 +19,7 @@
         <!-- Additional CSS -->
         <link href="register-styles.css" rel="stylesheet" />
     </head>
-    <body id="page-top">
+    <body id="page-top" onload="checkCookie()">
         <!-- Navigation-->
         <?php include "../utils/navbar.php"; ?>
 
@@ -29,7 +29,7 @@
                 <div class="card card-signin my-5">
                   <div class="card-body">
                     <h5 class="card-title text-center">Login</h5>
-                    <form class="form-signin" method="post" action="login_page.php">
+                    <form id="loginForm" class="form-signin" method="post" action="login_page.php">
                     <hr class="my-4">
                     
                       <div class="form-label-group">
@@ -44,8 +44,8 @@
                       </div>
         
                       <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Remember password</label>
+                        <input type="checkbox" class="custom-control-input" id="customCheck">
+                        <label class="custom-control-label" for="customCheck">Remember password</label>
                       </div>
 
                       <?php include('register-errors.php'); ?>

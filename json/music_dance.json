@@ -1,0 +1,58 @@
+[
+   {
+      "activity":"Music & Dance",
+      "id":"MD0",
+      "type":"Karaoke Singing",
+      "description":"Karaoke is a type of dining interactive entertainment which an amateur singer sings along with recorded music using a microphone.The music is normally an instrumental version of a well-known popular song.",
+      "point":"2",
+      "price":"10.00",
+      "datestart":"05 Dec 2020",
+      "dateend":"15 Dec 2020",
+      "timestart":"06:00pm",
+      "timeend":"08:00pm",
+      "location":"Gek Poh Ville Community Club,Singapore",
+      "url":"https://www.straitstimes.com/sites/default/files/styles/article_pictrure_780x520_/public/articles/2016/09/29/ST_20160929_RRELDERLY29_2624538.jpg?itok=k6QInx7z&timestamp=1475085610"
+   },
+   {
+      "activity":"Music & Dance",
+      "id":"MD1",
+      "type":"Hokkien Opera",
+      "description":"Hokkien opera, is the traditional drama form originated in Taiwan .Its earliest form adopted elements of folk songs from Zhangzhou, Fujian, China.",
+      "point":"2",
+      "price":"10.00",
+      "datestart":"10 Oct 2020",
+      "dateend":"28 Oct 2020",
+      "timestart":"07:00pm",
+      "timeend":"09:00pm",
+      "location":"Kaki Bukit Community Club,Singapore",
+      "url":"https://live.staticflickr.com/2596/3759440213_f8d73d6a3f_b.jpg"
+   },
+   {
+      "activity":"Music & Dance",
+      "id":"MD2",
+      "type":"Ballroom dance",
+      "description":"Latin dance is a general label, and a term in partner dance.",
+      "point":"3",
+      "price":"20.00",
+      "datestart":"02 Sept 2020",
+      "dateend":"15 Sept 2020",
+      "timestart":"05:00pm",
+      "timeend":"07:00pm",
+      "location":"Kallang Community Club,Singapore",
+      "url":"https://d22ir9aoo7cbf6.cloudfront.net/wp-content/uploads/sites/2/2017/09/honeycombers-dance-lindy-hop.jpg"
+   },
+   {
+      "activity":"Music & Dance",
+      "id":"MD3",
+      "type":"Angklung Class",
+      "description":"The angklung is a musical instrument from West Java, Indonesia made of a varying number of bamboo tubes attached to a bamboo frame. The tubes are carved to have a resonant pitch when struck and are tuned to octaves, similar to Western handbells.",
+      "point":"2",
+      "price":"10.00",
+      "datestart":"15 Oct 2020",
+      "dateend":"23 Oct 2020",
+      "timestart":"02:00pm",
+      "timeend":"04:00pm",
+      "location":"Dover Community Club,Singapore",
+      "url":"http://tanfoundation.com.sg/wp-content/uploads/2019/06/Esplanade-Angklung-2019-5.jpg"
+   }
+]

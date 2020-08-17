@@ -38,11 +38,12 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://mk0thefunempireuxo6i.kinstacdn.com/wp-content/uploads/2019/05/Group-Terrarium_Landscape-1-300x200.jpg" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Terraium Workshop (2 point)</h4>
+                    <h4 class="card-title">Terraium Workshop</h4>
+                    <h5 class="card-title"> - Earn 6 Points - </h5>
                     <p class="card-text">Terrarium Workshop is the ideal workshop for a team building session! Create your own mini garden in a jar during our terrarium team building session.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=WS0" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -51,11 +52,12 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://coursemology.sg/wp-content/uploads/2018/05/introduction-to-computer-and-internet.jpg" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Computer and Internet Workshop (2 point)</h4>
+                    <h4 class="card-title">Computer & Internet Workshop</h4>
+                    <h5 class="card-title"> - Earn 6 Points - </h5>
                     <p class="card-text">Introduction to Computer and Internet helps to remove the fear of using a computer for complete novices by using a simple, non-threatening approach to educating individuals in the basic skills of using a computer, email and the Internet. </p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=WS1" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -64,11 +66,12 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://www.straitstimes.com/sites/default/files/styles/article_pictrure_780x520_/public/articles/2018/05/30/as-epay3005.jpg?itok=85zzAuc8&timestamp=1527657329" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Digital Workshop (2 point)</h4>
+                    <h4 class="card-title">Digital Workshop</h4>
+                    <h5 class="card-title"> - Earn 6 Points - </h5>
                     <p class="card-text">The Digital Workshop is the computer training solution for people who have too little time to accomplish what they need to do and even less to obtain the skills.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=WS2" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -77,11 +80,12 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://rsvp.org.sg/wp-content/uploads/2019/04/Training-homepage.jpg" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Simple IT Programme Class (2 point)</h4>
-                    <p class="card-text">The IT Program teaches students a set of coded instructions that a computer can understand to solve a problem or produce a desired result. Here, students will also learn how to use programs like Microsoft and Transport</p>
+                    <h4 class="card-title">Simple IT Programme Class</h4>
+                    <h5 class="card-title"> - Earn 6 Points - </h5>
+                    <p class="card-text">A set of coded instructions that a computer can understand to solve a problem or produce a desired result.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=WS3" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -103,6 +107,6 @@
         <script src="../assets/mail/jqBootstrapValidation.js"></script>
         <script src="../assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
-        <script src="../js/rewards-scripts.js"></script>
+        <script src="../js/scripts.js"></script>
     </body>
 </html>

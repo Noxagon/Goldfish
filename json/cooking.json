@@ -1,0 +1,58 @@
+[
+   {
+      "activity":"Cooking",
+      "id":"CK0",
+      "type":"Macaron-making class",
+      "description":"A macaron is a sweet meringue-based confection made with egg white, icing sugar, granulated sugar, almond meal, and food colouring.",
+      "point":"7",
+      "price":"63.00",
+      "datestart":"09 Sep 2020",
+      "dateend":"30 Sep 2020",
+      "timestart":"07:30pm",
+      "timeend":"09:00pm",
+      "location":"Ang Mo Kio Community Club,Singapore",
+      "url":"https://i.ytimg.com/vi/-Yz78dFgjKQ/maxresdefault.jpg"
+   },
+   {
+      "activity":"Cooking",
+      "id":"CK1",
+      "type":"Cake-making class",
+      "description":"Cake is a form of sweet food made from flour, sugar, and other ingredients, that is usually baked. In their oldest forms, cakes were modifications of bread, but cakes now cover a wide range of preparations that can be simple or elaborate, and that share features with other desserts such as pastries, meringues, custards, and pies.",
+      "point":"6",
+      "price":"60.00",
+      "datestart":"10 Oct 2020",
+      "dateend":"28 Oct 2020",
+      "timestart":"09:00am",
+      "timeend":"12:00pm,",
+      "location":"Queenstown Community Club,Singapore",
+      "url":"https://www.thespruceeats.com/thmb/nfb2FfnHOKt6pMFBSj0pyJNHTxU=/1333x1000/smart/filters:no_upscale()/crepecake-5b5890aa46e0fb00250c57be.jpg"
+   },
+   {
+      "activity":"Cooking",
+      "id":"CK2",
+      "type":"Thai Cooking Class",
+      "description":"Thai cooking places emphasis on lightly prepared dishes with strong aromatic components and a spicy edge.",
+      "point":"6",
+      "price":"65.00",
+      "datestart":"05 Oct 2020",
+      "dateend":"26 Oct 2020",
+      "timestart":"02:00pm",
+      "timeend":"05:00pm",
+      "location":"Kallang Community Club,Singapore",
+      "url":"https://static.wixstatic.com/media/c7baa0_6970a105a309428d8ca4c78227552839~mv2_d_2800_2240_s_2.jpg/v1/fill/w_1000,h_800,al_c,q_90,usm_0.66_1.00_0.01/c7baa0_6970a105a309428d8ca4c78227552839~mv2_d_2800_2240_s_2.jpg"
+   },
+   {
+      "activity":"Cooking",
+      "id":"CK3",
+      "type":"French Cooking Class",
+      "description":"French cuisine developed throughout the centuries influenced by the many surrounding cultures of Spain, Italy, Switzerland, Germany and Belgium.",
+      "point":"8",
+      "price":"78.00",
+      "datestart":"01 Dec 2020",
+      "dateend":"20 Dec 2020",
+      "timestart":"01:00pm",
+      "timeend":"04:00pm",
+      "location":"Bukit Timah Community Club,Singapore",
+      "url":"https://upload.wikimedia.org/wikipedia/commons/6/6a/Jacques_Lameloise%2C_escab%C3%A8che_d%27%C3%A9crevisses_sur_gaspacho_d%27asperge_et_cresson.jpg"
+   }
+]

@@ -38,11 +38,12 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://www.aoe.com/fileadmin/AOE.com/images/main_navigation/blog/Stock_Photos/miscellaneous/Fotolia_94900081_Chess_Pieces_930_590_70.jpg" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Chess (1 point)</h4>
+                    <h4 class="card-title">Chess</h4>
+                    <h5 class="card-title"> - Earn 1 Points - </h5>
                     <p class="card-text">Chess is a two-player strategy board game played on a checkered board with 64 squares arranged in an 8×8 square grid.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=GM0" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -51,11 +52,12 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://cf.shopee.sg/file/6c0c8e6c2800a916ecd784f3e9ce2015" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Chapteh (1 point)</h4>
+                    <h4 class="card-title">Chapteh</h4>
+                    <h5 class="card-title"> - Earn 1 Points - </h5>
                     <p class="card-text">Chapteh is a traditional Asian game which requires players to keep a weighted shuttlecock in the air, usually using their feet, although other parts of the body may also be used, except for the hands.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=GM1" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -64,11 +66,12 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://live.staticflickr.com/3037/3550589331_f42ba97f76_b.jpg" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Gasing (1 point)</h4>
+                    <h4 class="card-title">Gasing</h4>
+                    <h5 class="card-title"> - Earn 1 Points - </h5>
                     <p class="card-text">Gasing is a term that refers to both the Malay spinning top and the game of top spinning. Gasing was a popular game played in the kampongs (“villages” in Malay) of Singapore and Malaysia, especially among members of the Malay community.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=GM2" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -77,11 +80,12 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://test1.thkms.org.sg/wp-content/uploads/2016/05/marbles.jpg" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Goli (1 point)</h4>
+                    <h4 class="card-title">Goli</h4>
+                    <h5 class="card-title"> - Earn 1 Points - </h5>
                     <p class="card-text">Also known as kelereng or guli, Goli is a game played with marbles. Made of either glass, clay, limestone, or plastic, the marbles are used to hit another players' marbles in an attempt to claim them.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="programs_info.php?id=GM3" class="btn btn-primary">Find Out More!</a>
                 </div>
                 </div>
             </div>
@@ -103,6 +107,6 @@
         <script src="../assets/mail/jqBootstrapValidation.js"></script>
         <script src="../assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
-        <script src="../js/rewards-scripts.js"></script>
+        <script src="../js/scripts.js"></script>
     </body>
 </html>

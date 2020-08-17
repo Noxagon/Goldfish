@@ -1,0 +1,58 @@
+[
+   {
+      "activity":"Game",
+      "id":"GM0",
+      "type":"Chess",
+      "description":"Chess is a two-player strategy board game played on a checkered board with 64 squares arranged in an 8×8 square grid.",
+      "point":"1",
+      "price":"0.00",
+      "datestart":"02 Oct 2020",
+      "dateend":"15 Oct 2020",
+      "timestart":"02:00pm",
+      "timeend":"03:00pm",
+      "location":"Boon Lay Community Club,Singapore",
+      "url":"https://www.aoe.com/fileadmin/AOE.com/images/main_navigation/blog/Stock_Photos/miscellaneous/Fotolia_94900081_Chess_Pieces_930_590_70.jpg"
+   },
+   {
+      "activity":"Game",
+      "id":"GM1",
+      "type":"Chapteh",
+      "description":"Chapteh is a traditional Asian game which requires players to keep a weighted shuttlecock in the air, usually using their feet, although other parts of the body may also be used, except for the hands.",
+      "point":"1",
+      "price":"0.00",
+      "datestart":"10 Sept 2020",
+      "dateend":"20 Sept 2020",
+      "timestart":"10:00am",
+      "timeend":"11:00am",
+      "location":"Kallang Community Club,Singapore",
+      "url":"https://cf.shopee.sg/file/6c0c8e6c2800a916ecd784f3e9ce2015"
+   },
+   {
+      "activity":"Game",
+      "id":"GM2",
+      "type":"Gasing",
+      "description":"Gasing is a term that refers to both the Malay spinning top and the game of top spinning. Gasing was a popular game played in the kampongs of Singapore and Malaysia, especially among members of the Malay community.",
+      "point":"1",
+      "price":"0.00",
+      "datestart":"13 Sept 2020",
+      "dateend":"22 Sept 2020",
+      "timestart":"11:00am",
+      "timeend":"12:00pm",
+      "location":"Ang Mo Kio Community Club,Singapore",
+      "url":"https://live.staticflickr.com/3037/3550589331_f42ba97f76_b.jpg"
+   },
+   {
+      "activity":"Game",
+      "id":"GM3",
+      "type":"Goli",
+      "description":"Also known as kelereng or guli, Goli is a game played with marbles. Made of either glass, clay, limestone, or plastic, the marbles are used to hit another players' marbles in an attempt to claim them.",
+      "point":"1",
+      "price":"0.00",
+      "datestart":"5 Dec 2020",
+      "dateend":"10 Dec 2020",
+      "timestart":"09:00am",
+      "timeend":"10:00am",
+      "location":"Dover Community Club,Singapore",
+      "url":"https://test1.thkms.org.sg/wp-content/uploads/2016/05/marbles.jpg"
+   }
+]
