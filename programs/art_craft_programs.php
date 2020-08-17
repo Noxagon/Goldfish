@@ -27,9 +27,8 @@
 
             <!-- Jumbotron Header -->
             <header class="jumbotron my-4">
-            <h1 class="display-3">A Warm Welcome!</h1>
-            <p class="lead">We have a variety of Arts & Craft to choose from!</p>
-            <!-- <a href="#" class="btn btn-primary btn-lg">Call to action!</a> -->
+            <h1 class="display-3">Arts & Crafts</h1>
+            <p class="lead">We have a variety of Arts & Craft for you to choose from!</p>
             </header>
 
             <!-- Page Features -->
