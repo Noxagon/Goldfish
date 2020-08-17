@@ -146,17 +146,6 @@ if (isset($_POST['status'])) {
                             },
                             onApprove: function(data, actions) {
                                 return actions.order.capture().then(function(details) {
-                                    // $.ajax({
-                                    //     url: $(this).attr('action') || window.location.pathname,
-                                    //     type: "POST",
-                                    //     data: {'status': 'approved'},
-                                    //     success: function(data) {
-                                    //         alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                                    //     },
-                                    //     error: function(jXHR, textStatus, errorThrown) {
-                                    //         alert(errorThrown);
-                                    //     }
-                                    // });
                                     $.post( $(this).attr('action'), { status: "approved" } );
                                 });
                             }

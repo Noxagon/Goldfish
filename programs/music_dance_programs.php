@@ -39,7 +39,8 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://www.straitstimes.com/sites/default/files/styles/article_pictrure_780x520_/public/articles/2016/09/29/ST_20160929_RRELDERLY29_2624538.jpg?itok=k6QInx7z&timestamp=1475085610" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Karaoke Singing (2 point)</h4>
+                    <h4 class="card-title">Karaoke Singing</h4>
+                    <h5 class="card-title"> - Earn 2 Points - </h5>
                     <p class="card-text">Karaoke is a type of dining interactive entertainment which an amateur singer sings along with recorded music using a microphone.The music is normally an instrumental version of a well-known popular song.</p>
                 </div>
                 <div class="card-footer">
@@ -52,7 +53,8 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://live.staticflickr.com/2596/3759440213_f8d73d6a3f_b.jpg" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Hokkien Opera (2 point)</h4>
+                    <h4 class="card-title">Hokkien Opera</h4>
+                    <h5 class="card-title"> - Earn 2 Points - </h5>
                     <p class="card-text">Hokkien opera, is the traditional drama form originated in Taiwan. ... Its earliest form adopted elements of folk songs from Zhangzhou, Fujian, China.</p>
                 </div>
                 <div class="card-footer">
@@ -65,7 +67,8 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="https://d22ir9aoo7cbf6.cloudfront.net/wp-content/uploads/sites/2/2017/09/honeycombers-dance-lindy-hop.jpg" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Ballroom dance (2 point)</h4>
+                    <h4 class="card-title">Ballroom dance</h4>
+                    <h5 class="card-title"> - Earn 3 Points - </h5>
                     <p class="card-text">Latin dance is a general label, and a term in partner dance.</p>
                 </div>
                 <div class="card-footer">
@@ -78,7 +81,8 @@
                 <div class="card h-100">
                 <img class="card-img-top" src="http://tanfoundation.com.sg/wp-content/uploads/2019/06/Esplanade-Angklung-2019-5.jpg" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Angklung Class (2 point)</h4>
+                    <h4 class="card-title">Angklung Class</h4>
+                    <h5 class="card-title"> - Earn 2 Points - </h5>
                     <p class="card-text">The angklung is a musical instrument from West Java, Indonesia made of a varying number of bamboo tubes attached to a bamboo frame. The tubes are carved to have a resonant pitch when struck and are tuned to octaves, similar to Western handbells. </p>
                 </div>
                 <div class="card-footer">

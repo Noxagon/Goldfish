@@ -89,6 +89,17 @@ function time_elapsed_string($datetime, $full = false)
     if (!$full) $string = array_slice($string, 0, 1);
     return $string ? implode(', ', $string) . ' ago' : 'just now';
 }
+
+if (isset($_POST['claim']) && $_POST['claim']=="approved") {
+    $stmt = $db->prepare("UPDATE users SET user_points = ? WHERE user_id = ?");
+    $stmt->bind_param("ss", $user_points, $user_id);
+
+    $user_points = $result - $product_points;
+    $user_id = $_SESSION['user_id'];
+    $stmt->execute();
+
+    $stmt->close();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -144,9 +155,9 @@ function time_elapsed_string($datetime, $full = false)
                     <div class="card-body">
                         <hr />
                         <h3 class="card-title"><?php echo "{$ya->nodeValue}"; ?></h3>
-                        <button type="button" onclick="updatePoints(<?php echo $result; ?>, <?php echo $product_points; ?>))" id="claimBtn" name="claimBtn" class="button btn btn-primary ml-auto <?php if ($result <= $product_points) {
-                                                                                                                                                                                                        echo "disabled";
-                                                                                                                                                                                                    } ?>">
+                        <button type="submit" id="claimBtn" name="claimBtn" class="button btn btn-primary ml-auto <?php if ($result < $product_points) {
+                                                                                                                        echo "disabled";
+                                                                                                                    } ?>">
                             <h5><i class="fab fa-bitcoin"></i> <?php echo "{$product_points}"; ?> Points</h5>
                         </button>
                         <hr />
@@ -319,21 +330,6 @@ function time_elapsed_string($datetime, $full = false)
     <!-- Core theme JS-->
     <script src="../js/scripts.js"></script>
     <script src="../js/product-scripts.js"></script>
-    <script>
-        function updatePoints(userPts, itemPts) {
-            <?php
-            $stmt = $db->prepare("UPDATE users SET user_points = ? WHERE user_id = ?");
-            $stmt->bind_param("ss", $user_points, $user_id);
-
-            $user_points = $result - $product_points;
-            $user_id = $_SESSION['user_id'];
-            $stmt->execute();
-
-            $stmt->close();
-            ?>
-            alert("Claimed!");
-        }
-    </script>
 </body>
 
 </html>

@@ -25,3 +25,11 @@ function toggle(id) {
         document.getElementById("star" + j).style.color = "black";
     }
 }
+
+$(document).ready(function() {
+    $("#claimBtn").click(function() {
+        alert("Product claimed!");
+        $.post( $(this).attr('action'), { claim: "approved" } );
+        location.reload();
+    });
+});
