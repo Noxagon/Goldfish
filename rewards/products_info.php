@@ -155,11 +155,11 @@ if (isset($_POST['claim']) && $_POST['claim']=="approved") {
                     <div class="card-body">
                         <hr />
                         <h3 class="card-title"><?php echo "{$ya->nodeValue}"; ?></h3>
-                        <button type="submit" id="claimBtn" name="claimBtn" class="button btn btn-primary ml-auto <?php if ($result < $product_points) {
-                                                                                                                        echo "disabled";
-                                                                                                                    } ?>">
+                        <?php if ($result >= $product_points) : ?>
+                        <button type="submit" id="claimBtn" name="claimBtn" class="button btn btn-primary ml-auto">
                             <h5><i class="fab fa-bitcoin"></i> <?php echo "{$product_points}"; ?> Points</h5>
                         </button>
+                        <?php endif; ?>
                         <hr />
                         <p class="card-text"><b>Key Information:</b><br /> <?php echo "{$ye->nodeValue}"; ?></p>
                         <p class="card-text" style="margin-bottom: 0.5rem;"><b>Country of Origin:</b><br /> <?php echo "{$yd->nodeValue}"; ?></p>
