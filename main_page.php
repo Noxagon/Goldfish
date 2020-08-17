@@ -288,7 +288,7 @@ if (isset($_GET['logout'])) {
             <!-- About Section Content-->
             <div class="row">
                 <div class="col-lg-4 ml-auto">
-                    <p class="lead">We are a group of students from Singapore Polytechnic, located at 500 Dover Rd, Singapore 139651.</p>
+                    <p class="lead text-right">We are a group of students from Singapore Polytechnic, located at 500 Dover Rd, Singapore 139651.</p>
                 </div>
                 <div class="col-lg-4 mr-auto">
                     <p class="lead">We are developing a website to help the elderly to lead active and dignified lives in the silver years.</p>
