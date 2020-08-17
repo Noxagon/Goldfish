@@ -49,13 +49,13 @@
                 </ol>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                    <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+                    <img class="d-block img-fluid" src="https://www.watsons.com.sg/medias/WS-1005x420px-banner-04.jpg?context=bWFzdGVyfHJvb3R8MTEzODUyfGltYWdlL2pwZWd8aDk0L2hmZS84OTQ4ODI2NDcyNDc4LmpwZ3xmMmQxNzY2ZGYwZGFlY2M0NGI4NWU4ZjUzYTYwOTVkOTc0OWJmNzcwYWNmMWQxY2ZjNjM2YmZiZTg5NjYyOTJl" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                    <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+                    <img class="d-block img-fluid" src="https://www.willadsenfamily.org/wp-content/uploads/2019/07/Cooker_banner.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                    <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+                    <img class="d-block img-fluid" src="https://www.vanillaluxury.sg/sites/default/files/field/image/banner_136.png" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
