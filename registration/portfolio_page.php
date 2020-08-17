@@ -44,7 +44,7 @@
                         <h1 class="text-uppercase text-secondary">Goldfish</h1>
                         <hr/>
                             <h4 class=" text-uppercase text-secondary">
-                                We are a group of students from Singapore Polytechnic, developing a website to help the elderly to lead active and dignified lives in the silver years.
+                                We are a group of students from Singapore Polytechnic, studying in the Diploma in Electrical,Electronic,Engineering. Our goal here is to develop a website to help the elderly to lead active and dignified lives in the silver years.
                             </h4>
                         </div>
                         <div class="col-5">
@@ -169,7 +169,7 @@
                                 <ul>
                                     <li>Student</li>
                                     <li>Web Developer</li>
-                                    <li></li>
+                                    <li>Goals & Motivation: To Be Able To Learn Coding.</li>
                                 </ul>
                             </div>
                         </div>

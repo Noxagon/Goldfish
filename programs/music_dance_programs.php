@@ -54,7 +54,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Hokkien Opera</h4>
                     <h5 class="card-title"> - Earn 2 Points - </h5>
-                    <p class="card-text">Hokkien opera, is the traditional drama form originated in Taiwan. ... Its earliest form adopted elements of folk songs from Zhangzhou, Fujian, China.</p>
+                    <p class="card-text">Hokkien opera, is the traditional drama form originated in Taiwan. Its earliest form adopted elements of folk songs from Zhangzhou, Fujian, China.</p>
                 </div>
                 <div class="card-footer">
                     <a href="programs_info.php?id=MD1" class="btn btn-primary">Find Out More!</a>

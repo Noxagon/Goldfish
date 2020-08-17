@@ -103,7 +103,7 @@ if (isset($_GET['logout'])) {
                 <div class="divider-custom-line"></div>
             </div>
             <!-- Masthead Subheading-->
-            <p class="masthead-subheading font-weight-light mb-0">- Join Programmes - Earn Rewards -</p>
+            <p class="masthead-subheading font-weight-light mb-0">- Join Engaging Programmes- Get Active - Earn Great Rewards -</p>
         </div>
     </header>
     <!-- Portfolio Section-->
@@ -452,7 +452,7 @@ if (isset($_GET['logout'])) {
                                 <!-- Portfolio Modal - Image-->
                                 <img class="img-fluid rounded mb-5" src="assets/img/programs/artcraft.jpg" alt="" />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-5">Come and join our cookin arts & craft class for people who are keen in learning how to design</p>
+                                <p class="mb-5">Come and join our arts & craft class for people who are keen in learning how to design</p>
                                 <a href="programs/art_craft_programs.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                             </div>
                         </div>
@@ -515,7 +515,7 @@ if (isset($_GET['logout'])) {
                                 <!-- Portfolio Modal - Image-->
                                 <img class="img-fluid rounded mb-5" src="assets/img/rewards/grocery_3.jpg" alt="" />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-5">Click proceed to find more on the groceries you can redeem</p>
+                                <p class="mb-5">Click proceed to find out more on the groceries you can redeem</p>
                                 <a href="rewards/grocery_products.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                             </div>
                         </div>
@@ -546,7 +546,7 @@ if (isset($_GET['logout'])) {
                                 <!-- Portfolio Modal - Image-->
                                 <img class="img-fluid rounded mb-5" src="assets/img/rewards/health_2.jpg" alt="" />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-5">Click proceed to find more on the health products you can redeem</p>
+                                <p class="mb-5">Click proceed to find out more on the health products you can redeem</p>
                                 <a href="rewards/health_products.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                             </div>
                         </div>
@@ -577,7 +577,7 @@ if (isset($_GET['logout'])) {
                                 <!-- Portfolio Modal - Image-->
                                 <img class="img-fluid rounded mb-5" src="assets/img/rewards/home.jpg" alt="" />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-5">Click proceed to find more on the home appliances you can redeem</p>
+                                <p class="mb-5">Click proceed to find out more on the home appliances you can redeem</p>
                                 <a href="rewards/home_products.php" class="btn btn-primary"><i class="fas fa-arrow-circle-right"></i> Proceed</a>
                             </div>
                         </div>
