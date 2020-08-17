@@ -27,9 +27,8 @@
 
             <!-- Jumbotron Header -->
             <header class="jumbotron my-4">
-            <h1 class="display-3">A Warm Welcome!</h1>
-            <p class="lead">We have a variety of Arts & Craft to choose from!</p>
-            <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
+            <h1 class="display-3">Arts & Crafts</h1>
+            <p class="lead">We have a variety of Arts & Craft for you to choose from!</p>
             </header>
 
             <!-- Page Features -->
@@ -66,7 +65,7 @@
                 <img class="card-img-top" src="https://www.wonderwall.sg/content/dam/wonderwall/images/2019/08/where-to-do-pottery-in-singapore/potterysg_1920x1080-lead.jpg" alt="">
                 <div class="card-body">
                     <h4 class="card-title">Pottery Class (1 point)</h4>
-                    <p class="card-text">Pottery teach the skills students need to create their own pieces of artwork, and cover topics ranging from art history to sculpture..</p>
+                    <p class="card-text">Pottery teach the skills students need to create their own pieces of artwork, and cover topics ranging from art history to sculpture.</p>
                 </div>
                 <div class="card-footer">
                     <a href="#" class="btn btn-primary">Find Out More!</a>
@@ -79,7 +78,7 @@
                 <img class="card-img-top" src="https://ajewelrystyle.com/wp-content/uploads/2020/02/Craft-Tools-you-Should-Have-when-Making-Jewellery.jpg" alt="">
                 <div class="card-body">
                     <h4 class="card-title">Jewellery Craft (1 point)</h4>
-                    <p class="card-text">Beaded jewellery commonly encompasses necklaces, bracelets, earrings, belts and rings. ... Bead embroidery, a popular type of handwork during the Victorian era, is enjoying a renaissance in modern jewellery Craft.</p>
+                    <p class="card-text">Beaded jewellery commonly encompasses necklaces, bracelets, earrings, belts and rings.  Bead embroidery, a popular type of handwork during the Victorian era, is enjoying a renaissance in modern Jewellery Craft.</p>
                 </div>
                 <div class="card-footer">
                     <a href="#" class="btn btn-primary">Find Out More!</a>

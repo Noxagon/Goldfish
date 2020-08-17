@@ -27,9 +27,8 @@
 
             <!-- Jumbotron Header -->
             <header class="jumbotron my-4">
-            <h1 class="display-3">A Warm Welcome!</h1>
-            <p class="lead">We have a variety of games to choose from!</p>
-            <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
+            <h1 class="display-3">Games</h1>
+            <p class="lead">We have a variety of games for you to choose from!</p>
             </header>
 
             <!-- Page Features -->

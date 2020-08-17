@@ -27,9 +27,8 @@
 
             <!-- Jumbotron Header -->
             <header class="jumbotron my-4">
-            <h1 class="display-3">A Warm Welcome!</h1>
-            <p class="lead">We have a variety of dance class to choose from!</p>
-            <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
+            <h1 class="display-3">Music & Dance Programmes</h1>
+            <p class="lead">We have a variety of dance classes for you to choose from!</p>
             </header>
 
             <!-- Page Features -->
@@ -53,7 +52,7 @@
                 <img class="card-img-top" src="https://live.staticflickr.com/2596/3759440213_f8d73d6a3f_b.jpg" alt="">
                 <div class="card-body">
                     <h4 class="card-title">Hokkien Opera (2 point)</h4>
-                    <p class="card-text">Hokkien opera, is the traditional drama form originated in Taiwan. ... Its earliest form adopted elements of folk songs from Zhangzhou, Fujian, China.</p>
+                    <p class="card-text">Hokkien opera, is the traditional drama form originated in Taiwan. Its earliest form adopted elements of folk songs from Zhangzhou, Fujian, China.</p>
                 </div>
                 <div class="card-footer">
                     <a href="#" class="btn btn-primary">Find Out More!</a>
@@ -66,7 +65,7 @@
                 <img class="card-img-top" src="https://d22ir9aoo7cbf6.cloudfront.net/wp-content/uploads/sites/2/2017/09/honeycombers-dance-lindy-hop.jpg" alt="">
                 <div class="card-body">
                     <h4 class="card-title">Ballroom dance (2 point)</h4>
-                    <p class="card-text">Latin dance is a general label, and a term in partner dance.</p>
+                    <p class="card-text">Ballroom dance is a set of partner dances, which are enjoyed both socially and competitively around the world. Because of its performance and entertainment aspects, ballroom dance is also widely enjoyed on stage, film, and television.</p>
                 </div>
                 <div class="card-footer">
                     <a href="#" class="btn btn-primary">Find Out More!</a>

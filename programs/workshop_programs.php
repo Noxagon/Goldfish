@@ -27,9 +27,8 @@
 
             <!-- Jumbotron Header -->
             <header class="jumbotron my-4">
-            <h1 class="display-3">A Warm Welcome!</h1>
-            <p class="lead">We have a variety of workshops to choose from!</p>
-            <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
+            <h1 class="display-3">Workshop Programmes</h1>
+            <p class="lead">We have a variety of workshops for you to choose from!</p>
             </header>
 
             <!-- Page Features -->
@@ -79,7 +78,7 @@
                 <img class="card-img-top" src="https://rsvp.org.sg/wp-content/uploads/2019/04/Training-homepage.jpg" alt="">
                 <div class="card-body">
                     <h4 class="card-title">Simple IT Programme Class (2 point)</h4>
-                    <p class="card-text">A set of coded instructions that a computer can understand to solve a problem or produce a desired result.</p>
+                    <p class="card-text">The IT Program teaches students a set of coded instructions that a computer can understand to solve a problem or produce a desired result. Here, students will also learn how to use programs like Microsoft and Transport</p>
                 </div>
                 <div class="card-footer">
                     <a href="#" class="btn btn-primary">Find Out More!</a>
