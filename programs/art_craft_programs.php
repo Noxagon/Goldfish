@@ -82,7 +82,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Jewellery Craft</h4>
                     <h5 class="card-title"> - Earn 3 Points - </h5>
-                    <p class="card-text">Beaded jewellery commonly encompasses necklaces, bracelets, earrings, belts and rings. ... Bead embroidery, a popular type of handwork during the Victorian era, is enjoying a renaissance in modern jewellery Craft.</p>
+                    <p class="card-text">Beaded jewellery commonly encompasses necklaces, bracelets, earrings, belts and rings. Bead embroidery, a popular type of handwork during the Victorian era, is enjoying a renaissance in modern jewellery Craft.</p>
                 </div>
                 <div class="card-footer">
                     <a href="programs_info.php?id=AC3" class="btn btn-primary">Find Out More!</a>
